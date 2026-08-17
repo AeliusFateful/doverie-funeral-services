@@ -2,4 +2,4 @@
 :HL["/doverie-funeral-services/_next/static/media/CormorantGaramond_Bold-s.p.0mc1_wqqm8ev9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/doverie-funeral-services/_next/static/media/CormorantGaramond_Light-s.p.3v7h6lxpse2l-.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/doverie-funeral-services/_next/static/media/CormorantGaramond_Medium-s.p.0qe2jcp-pz3-o.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"privacy","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"DG7mAcqrQwZ0IWEIlojv3"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"privacy","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"Dl3lszoGTHRvIFr3x1La8"}
