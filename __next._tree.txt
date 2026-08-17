@@ -1,6 +1,7 @@
-:HL["/Doverie-funeral-services/_next/static/chunks/1gupv-0y2z-ju.css","style"]
-:HL["/Doverie-funeral-services/_next/static/media/01e4147cff8141ee.p.3huc2loe0ie8a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/Doverie-funeral-services/_next/static/media/b0947914c9718a1e.p.1xjn85gt7t6qs.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/Doverie-funeral-services/_next/static/chunks/0yyorq1um-lz_.css","style"]
-:HL["/Doverie-funeral-services/_next/static/chunks/3w_-3hclgqqn5.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}},"staleTime":300,"buildId":"vsxE29bWGUv02ZOL54PH9"}
+:HL["/repo-name/_next/static/chunks/0c8kxd2ol4p65.css","style"]
+:HL["/repo-name/_next/static/media/CormorantGaramond_Bold-s.p.0mc1_wqqm8ev9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/repo-name/_next/static/media/CormorantGaramond_Light-s.p.3v7h6lxpse2l-.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/repo-name/_next/static/media/CormorantGaramond_Medium-s.p.0qe2jcp-pz3-o.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/repo-name/_next/static/chunks/0yyorq1um-lz_.css","style"]
+:HL["/repo-name/_next/static/chunks/0ec3zpdfn3osp.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}},"staleTime":300,"buildId":"yTHQWAyPKmSzTOv4-kl6m"}

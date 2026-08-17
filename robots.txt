@@ -1,4 +1,0 @@
-User-Agent: *
-Allow: /
-
-Sitemap: https://doverie-kemerovo.ru/sitemap.xml
