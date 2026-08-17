@@ -1,4 +1,5 @@
 import { siteConfig } from "@/lib/site";
+export const dynamic = "force-static";
 
 export default function sitemap() {
   const base = siteConfig.url;

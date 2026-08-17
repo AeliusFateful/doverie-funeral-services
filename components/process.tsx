@@ -29,7 +29,7 @@ function StepCard({
           alt=""
           fill
           sizes={isFeatured ? "40vw" : "25vw"}
-          quality={60}
+          quality={75}
           loading="lazy"
           className="object-cover opacity-15 transition-opacity duration-300 ease-in-out group-hover:opacity-25"
         />

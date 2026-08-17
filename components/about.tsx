@@ -33,7 +33,7 @@ export function About() {
                     alt={`${siteConfig.owner.name} — владелец агентства «Доверие»`}
                     fill
                     sizes="(min-width: 1024px) 22rem, 90vw"
-                    quality={80}
+                    quality={75}
                     loading="lazy"
                     className="object-cover object-top"
                   />
@@ -74,7 +74,7 @@ export function About() {
                 alt={`${siteConfig.owner.name} — владелец агентства «Доверие»`}
                 fill
                 sizes="(min-width: 1024px) 22rem, 90vw"
-                quality={80}
+                quality={75}
                 loading="lazy"
                 className="object-cover object-top"
               />

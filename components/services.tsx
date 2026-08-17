@@ -37,7 +37,7 @@ export function Services() {
                     alt=""
                     fill
                     sizes="(min-width: 1024px) 20vw, 50vw"
-                    quality={70}
+                    quality={75}
                     loading="lazy"
                     className="object-cover opacity-25 transition-opacity duration-500 ease-in-out group-hover:opacity-35"
                   />
