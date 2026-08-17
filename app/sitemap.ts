@@ -1,22 +1,21 @@
-import type { MetadataRoute } from 'next'
-import { siteConfig } from '@/lib/site'
+import { siteConfig } from "@/lib/site";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const base = siteConfig.url
-  const lastModified = new Date(siteConfig.lastUpdated)
+export default function sitemap() {
+  const base = siteConfig.url;
+  const lastModified = new Date(siteConfig.lastUpdated);
 
   return [
     {
       url: base,
       lastModified,
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: `${base}/privacy`,
       lastModified,
-      changeFrequency: 'yearly',
+      changeFrequency: "yearly",
       priority: 0.3,
     },
-  ]
+  ];
 }

@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
-import { JsonLd } from "@/components/json-ld";
-import { rootMetadata } from "@/lib/seo";
+import { JsonLd } from "../components/json-ld";
+import { rootMetadata } from "../lib/seo";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
