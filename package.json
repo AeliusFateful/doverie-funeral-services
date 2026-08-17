@@ -1,12 +1,14 @@
 {
-  "name": "doverie-funeral-services",
+  "name": "Doverie-funeral-services",
   "version": "0.0.0",
+  "homepage": "https://gabimarudev.github.io/Doverie-funeral-services",
   "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",

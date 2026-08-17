@@ -39,6 +39,7 @@ const nextConfig = {
       },
     ];
   },
+  base: "/Doverie-funeral-services",
 };
 
 export default nextConfig;
