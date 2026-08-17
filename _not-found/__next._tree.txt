@@ -1,2 +1,2 @@
-:HL["/repo-name/_next/static/chunks/0c8kxd2ol4p65.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"yTHQWAyPKmSzTOv4-kl6m"}
+:HL["/Doverie-funeral-services/_next/static/chunks/0c8kxd2ol4p65.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"mx-Luia9Nf2cEa0TvtxC1"}

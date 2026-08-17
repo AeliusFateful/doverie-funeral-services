@@ -3,8 +3,8 @@ self.__BUILD_MANIFEST = {
     "afterFiles": [],
     "beforeFiles": [
       {
-        "source": "/repo-name//_next/:path+",
-        "destination": "/repo-name/_next/:path+"
+        "source": "/Doverie-funeral-services//_next/:path+",
+        "destination": "/Doverie-funeral-services/_next/:path+"
       }
     ],
     "fallback": []
