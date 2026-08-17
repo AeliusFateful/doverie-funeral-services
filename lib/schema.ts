@@ -1,6 +1,6 @@
-import { faqs } from '@/lib/data/faq'
-import { reviews } from '@/lib/data/reviews'
-import { siteConfig } from '@/lib/site'
+import { faqs } from '../lib/data/faq'
+import { reviews } from '../lib/data/reviews'
+import { siteConfig } from '../lib/site'
 
 const city = siteConfig.address.city
 const businessId = `${siteConfig.url}/#business`
@@ -16,8 +16,8 @@ function funeralHomeSchema() {
     description: siteConfig.description,
     url: siteConfig.url,
     telephone: siteConfig.phone,
-    image: `${siteConfig.url}/images/Hero-Angel.webp`,
-    logo: `${siteConfig.url}/images/dove.svg`,
+    image: `../public/images/Hero-Angel.webp`,
+    logo: `../public/images/dove.svg`,
     address: {
       '@type': 'PostalAddress',
       streetAddress: siteConfig.address.street,

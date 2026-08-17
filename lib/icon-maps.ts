@@ -16,11 +16,11 @@ import {
   LuShieldCheck,
   LuTruck,
   LuUserRound,
-} from "@/lib/icons";
-import type { AboutValue } from "@/lib/data/about";
-import type { ProcessStep } from "@/lib/data/process";
-import type { ServiceItem } from "@/lib/data/services";
-import type { WhyUsReason } from "@/lib/data/why-us";
+} from "../lib/icons";
+import type { AboutValue } from "../lib/data/about";
+import type { ProcessStep } from "../lib/data/process";
+import type { ServiceItem } from "../lib/data/services";
+import type { WhyUsReason } from "../lib/data/why-us";
 import type { IconType } from "react-icons";
 
 const serviceIconMap: Record<ServiceItem["icon"], IconType> = {

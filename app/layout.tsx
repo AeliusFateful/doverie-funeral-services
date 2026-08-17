@@ -41,8 +41,8 @@ const manrope = localFont({
 export const metadata: Metadata = {
   ...rootMetadata,
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    apple: "/icon.svg",
+    icon: [{ url: "../public/icon.svg", type: "image/svg+xml" }],
+    apple: "../public/icon.svg",
   },
 };
 

@@ -1,6 +1,6 @@
-import { HiStar, LuQuote } from '@/lib/icons'
-import { Reveal } from '@/components/reveal'
-import { reviewPlatforms, reviews } from '@/lib/data/reviews'
+import { HiStar, LuQuote } from "@/lib/icons";
+import { Reveal } from "@/components/reveal";
+import { reviewPlatforms, reviews } from "@/lib/data/reviews";
 
 export function Reviews() {
   return (
@@ -94,5 +94,5 @@ export function Reviews() {
         </div>
       </div>
     </section>
-  )
+  );
 }

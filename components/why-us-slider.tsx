@@ -1,35 +1,34 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import Image from "next/image"
-import { LuChevronLeft, LuChevronRight } from "@/lib/icons"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { EffectCards, Navigation, Pagination } from "swiper/modules"
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { LuChevronLeft, LuChevronRight } from "@/lib/icons";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards, Navigation } from "swiper/modules";
 
-import "swiper/css"
-import "swiper/css/effect-cards"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
+import "swiper/css";
+import "swiper/css/effect-cards";
+import "swiper/css/navigation";
 
 const slides = [
-  { src: '/images/why-us/main.webp', alt: '«Доверие»' },
-  { src: '/images/why-us/coffin1.webp', alt: '«Доверие»' },
-  { src: '/images/why-us/coffin2.webp', alt: '«Доверие»' },
-  { src: '/images/why-us/clothes1.webp', alt: '«Доверие»' },
-  { src: '/images/why-us/clothes2.webp', alt: '«Доверие»' },
-  { src: '/images/why-us/tape1.webp', alt: '«Доверие»' },
-] as const
+  { src: "@/public/images/why-us/main.webp", alt: "«Доверие»" },
+  { src: "@/public/images/why-us/coffin1.webp", alt: "«Доверие»" },
+  { src: "@/public/images/why-us/coffin2.webp", alt: "«Доверие»" },
+  { src: "@/public/images/why-us/clothes1.webp", alt: "«Доверие»" },
+  { src: "@/public/images/why-us/clothes2.webp", alt: "«Доверие»" },
+  { src: "@/public/images/why-us/tape1.webp", alt: "«Доверие»" },
+] as const;
 
 export function WhyUsSlider() {
-  const [reducedMotion, setReducedMotion] = useState(false)
+  const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
-    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
-    setReducedMotion(mq.matches)
-    const onChange = () => setReducedMotion(mq.matches)
-    mq.addEventListener('change', onChange)
-    return () => mq.removeEventListener('change', onChange)
-  }, [])
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReducedMotion(mq.matches);
+    const onChange = () => setReducedMotion(mq.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
 
   return (
     <div className="why-us-slider relative h-full min-h-80 w-full lg:min-h-0">
@@ -39,11 +38,11 @@ export function WhyUsSlider() {
         grabCursor
         cardsEffect={{ perSlideRotate: 4, slideShadows: false }}
         navigation={{
-          prevEl: '.why-us-slider-prev',
-          nextEl: '.why-us-slider-next',
+          prevEl: ".why-us-slider-prev",
+          nextEl: ".why-us-slider-next",
         }}
         pagination={{
-          el: '.why-us-slider-pagination',
+          el: ".why-us-slider-pagination",
           clickable: true,
           dynamicBullets: true,
         }}
@@ -58,7 +57,7 @@ export function WhyUsSlider() {
               width={800}
               height={1000}
               quality={75}
-              loading={i === 0 ? 'eager' : 'lazy'}
+              loading={i === 0 ? "eager" : "lazy"}
               className="aspect-3/4 w-[70%] rounded-2xl object-cover lg:w-full"
               sizes="(min-width: 1024px) 28vw, 70vw"
               priority={i === 0}
@@ -84,5 +83,5 @@ export function WhyUsSlider() {
 
       <div className="why-us-slider-pagination absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 gap-2" />
     </div>
-  )
+  );
 }

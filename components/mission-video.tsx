@@ -1,12 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Reveal } from "@/components/reveal";
 import { siteConfig } from "@/lib/site";
 
 export function MissionVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [muted, setMuted] = useState(true);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -29,13 +28,6 @@ export function MissionVideo() {
     return () => observer.disconnect();
   }, []);
 
-  const toggleMute = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    video.muted = !video.muted;
-    setMuted(video.muted);
-  };
-
   return (
     <section className="section-surface">
       <div className="section-py mx-auto max-w-site px-5 md:px-8">
@@ -44,7 +36,7 @@ export function MissionVideo() {
             <video
               ref={videoRef}
               className="h-full w-full object-cover"
-              src="/videos/human.mp4"
+              src="@/public/videos/human.mp4"
               loop
               muted
               playsInline

@@ -1,24 +1,24 @@
-import { FaTelegram, FaVk, FaWhatsapp } from 'react-icons/fa6'
-import { cn } from '@/lib/utils'
-import { socialLinks } from '@/lib/social-links'
+import { FaTelegram, FaVk, FaWhatsapp } from "react-icons/fa6";
+import { cn } from "@/lib/utils";
+import { socialLinks } from "@/lib/social-links";
 
 const icons = {
   WhatsApp: FaWhatsapp,
   Telegram: FaTelegram,
   VK: FaVk,
-} as const
+} as const;
 
 export function SocialLinks({
   className,
   iconClassName,
 }: {
-  className?: string
-  iconClassName?: string
+  className?: string;
+  iconClassName?: string;
 }) {
   return (
-    <div className={cn('flex items-center gap-3', className)}>
+    <div className={cn("flex items-center gap-3", className)}>
       {socialLinks.map((link) => {
-        const Icon = icons[link.name]
+        const Icon = icons[link.name];
         return (
           <a
             key={link.name}
@@ -27,14 +27,14 @@ export function SocialLinks({
             rel="noopener noreferrer"
             aria-label={link.label}
             className={cn(
-              'flex h-12 w-12 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors duration-300 ease-in-out hover:border-accent/40 hover:text-accent',
+              "flex h-12 w-12 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors duration-300 ease-in-out hover:border-accent/40 hover:text-accent",
               iconClassName,
             )}
           >
             <Icon className="h-5 w-5" aria-hidden="true" />
           </a>
-        )
+        );
       })}
     </div>
-  )
+  );
 }

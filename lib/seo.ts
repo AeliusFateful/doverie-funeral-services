@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { siteConfig } from '@/lib/site'
+import { siteConfig } from '../lib/site'
 
 const city = siteConfig.address.city
 
@@ -36,7 +36,7 @@ const geoMeta = {
 } as const
 
 const ogImage = {
-  url: '/images/Hero-Angel.webp',
+  url: '../public/images/Hero-Angel.webp',
   width: 1200,
   height: 630,
   alt: `${siteConfig.name} — ритуальные услуги в ${city}`,

@@ -1,7 +1,7 @@
-import { Reveal } from '@/components/reveal'
-import { WhyUsSlider } from '@/components/why-us-slider'
-import { whyUsReasons } from '@/lib/data/why-us'
-import { getWhyUsIcon } from '@/lib/icon-maps'
+import { Reveal } from "@/components/reveal";
+import { WhyUsSlider } from "@/components/why-us-slider";
+import { whyUsReasons } from "@/lib/data/why-us";
+import { getWhyUsIcon } from "@/lib/icon-maps";
 
 export function WhyUs() {
   return (
@@ -23,13 +23,13 @@ export function WhyUs() {
           </Reveal>
           <div
             className="why-us-fade-overlay absolute inset-y-0 right-0 z-5 hidden lg:block"
-            style={{ left: '0%' }}
+            style={{ left: "0%" }}
             aria-hidden="true"
           />
 
           <div className="relative z-10 flex flex-col justify-center gap-8 sm:gap-10 lg:flex-1 lg:pl-2">
             {whyUsReasons.map((reason, i) => {
-              const Icon = getWhyUsIcon(reason.icon)
+              const Icon = getWhyUsIcon(reason.icon);
               return (
                 <Reveal key={reason.title} delay={i * 100}>
                   <div className="flex gap-4">
@@ -37,16 +37,20 @@ export function WhyUs() {
                       <Icon className="h-5 w-5" aria-hidden="true" />
                     </span>
                     <div>
-                      <h3 className="font-serif text-xl text-foreground">{reason.title}</h3>
-                      <p className="mt-2 text-base leading-relaxed text-muted-foreground">{reason.text}</p>
+                      <h3 className="font-serif text-xl text-foreground">
+                        {reason.title}
+                      </h3>
+                      <p className="mt-2 text-base leading-relaxed text-muted-foreground">
+                        {reason.text}
+                      </p>
                     </div>
                   </div>
                 </Reveal>
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

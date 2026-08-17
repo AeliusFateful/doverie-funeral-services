@@ -1,6 +1,5 @@
 import { HiStar, LuMapPin, LuPhone } from "@/lib/icons";
 import { siteConfig } from "@/lib/site";
-import { HeroMedia } from "@/components/hero-media";
 import { Reveal } from "@/components/reveal";
 import { SocialLinks } from "@/components/social-links";
 
@@ -16,8 +15,8 @@ export function Hero() {
       >
         <video
           className="absolute inset-0 h-full w-full object-cover object-[50%_30%]"
-          src="/videos/angel2.mp4"
-          poster="/images/Hero-Angel.webp"
+          src="@/public/videos/hero_angel.mp4"
+          poster="@/public/images/Hero-Angel.webp"
           autoPlay
           loop
           muted
@@ -40,7 +39,7 @@ export function Hero() {
             <h1 className="font-serif text-4xl font-medium leading-[1.08] tracking-tight text-foreground md:text-6xl">
               Ритуальные услуги в&nbsp;Кемерово
               <span className="mt-4 block text-2xl font-medium leading-snug tracking-tight text-foreground/90 md:text-3xl">
-                Достойное прощание и забота о каждой семьме
+                Достойное прощание и забота о каждой семье
               </span>
             </h1>
           </div>
