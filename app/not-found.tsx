@@ -1,16 +1,16 @@
-import type { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
-import { LuPhone } from '../lib/icons'
-import { createPageMetadata } from '../lib/seo'
-import { siteConfig, telHref } from '../lib/site'
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { LuPhone } from "../lib/icons";
+import { createPageMetadata } from "../lib/seo";
+import { siteConfig, telHref } from "../lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Страница не найдена',
+  title: "Страница не найдена",
   description: `Страница не найдена. Ритуальная служба «Доверие» в ${siteConfig.address.city} — круглосуточная помощь в организации похорон.`,
-  path: '/404',
+  path: "/404",
   noIndex: true,
-})
+});
 
 export default function NotFound() {
   return (
@@ -25,8 +25,8 @@ export default function NotFound() {
             Страница не найдена
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            Возможно, ссылка устарела или страница была перемещена. Вернитесь на главную — мы всегда рядом,
-            если нужна помощь.
+            Возможно, ссылка устарела или страница была перемещена. Вернитесь на
+            главную — мы всегда рядом, если нужна помощь.
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link href="/" className="btn-accent px-6 py-3.5 text-base">
@@ -44,7 +44,7 @@ export default function NotFound() {
 
         <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-lg lg:max-w-lg">
           <Image
-            src="../images/angel404.png"
+            src="../public/images/angel404.png"
             alt="Ангел — страница не найдена"
             fill
             sizes="(min-width: 1024px) 32vw, 90vw"
@@ -55,5 +55,5 @@ export default function NotFound() {
         </div>
       </div>
     </main>
-  )
+  );
 }

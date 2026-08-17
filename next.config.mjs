@@ -4,7 +4,6 @@ const nextConfig = {
   images: { unoptimized: true },
   poweredByHeader: false,
   basePath: "/doverie-funeral-services",
-  assetPrefix: "/doverie-funeral-services",
   output: "export",
 };
 
