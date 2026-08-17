@@ -1,7 +1,7 @@
 {
-  "name": "Doverie-funeral-services",
+  "name": "doverie-funeral-services",
   "version": "0.0.0",
-  "homepage": "https://gabimarudev.github.io/Doverie-funeral-services",
+  "homepage": "https://gabimarudev.github.io/doverie-funeral-services",
   "private": false,
   "scripts": {
     "dev": "next dev",

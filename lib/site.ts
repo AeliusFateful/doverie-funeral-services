@@ -21,8 +21,8 @@ export const siteConfig = {
     region: "RU-KEM",
   },
   owner: {
-    name: "Сергей Равильевич",
-    jobTitle: "Руководитель агентства",
+    name: "Сергей Равильевич Гусманов",
+    jobTitle: "Владелец агентства «Доверие»",
     image: "/images/Sergey/Sergey.webp",
   },
   links: {
@@ -35,7 +35,7 @@ export const siteConfig = {
     countLabel: "99+ оценок",
   },
   openingHours: "Mo-Su 00:00-24:00",
-  agentArrivalMinutes: "30–40",
+  agentArrivalMinutes: "15–30",
   lastUpdated: "2026-08-17",
   services: [
     "Организация похорон",
