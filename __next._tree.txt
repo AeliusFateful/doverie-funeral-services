@@ -1,0 +1,6 @@
+:HL["/Doverie-funeral-services/_next/static/chunks/1gupv-0y2z-ju.css","style"]
+:HL["/Doverie-funeral-services/_next/static/media/01e4147cff8141ee.p.3huc2loe0ie8a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Doverie-funeral-services/_next/static/media/b0947914c9718a1e.p.1xjn85gt7t6qs.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Doverie-funeral-services/_next/static/chunks/0yyorq1um-lz_.css","style"]
+:HL["/Doverie-funeral-services/_next/static/chunks/3w_-3hclgqqn5.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}},"staleTime":300,"buildId":"vsxE29bWGUv02ZOL54PH9"}
