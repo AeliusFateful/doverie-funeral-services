@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { LuPhone } from '@/lib/icons'
-import { createPageMetadata } from '@/lib/seo'
-import { siteConfig, telHref } from '@/lib/site'
+import { LuPhone } from '../lib/icons'
+import { createPageMetadata } from '../lib/seo'
+import { siteConfig, telHref } from '../lib/site'
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Страница не найдена',
@@ -44,7 +44,7 @@ export default function NotFound() {
 
         <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-lg lg:max-w-lg">
           <Image
-            src="/images/angel404.png"
+            src="../images/angel404.png"
             alt="Ангел — страница не найдена"
             fill
             sizes="(min-width: 1024px) 32vw, 90vw"

@@ -1,4 +1,4 @@
-import { siteConfig } from "@/lib/site";
+import { siteConfig } from "../lib/site";
 export const dynamic = "force-static";
 
 export default function sitemap() {

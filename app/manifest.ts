@@ -1,4 +1,4 @@
-import { siteConfig } from "@/lib/site";
+import { siteConfig } from "../lib/site";
 export const dynamic = "force-static";
 
 export default function manifest() {
@@ -13,7 +13,7 @@ export default function manifest() {
     lang: "ru",
     icons: [
       {
-        src: "/icon.svg",
+        src: "../icon.svg",
         sizes: "any",
         type: "image/svg+xml",
       },
