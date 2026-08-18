@@ -41,7 +41,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-1">
             <Image
               className="hidden min-[480px]:block"
-              src="/images/dove.svg"
+              src="./images/dove.svg"
               alt=""
               width={23}
               height={23}
@@ -51,7 +51,7 @@ export function SiteHeader() {
             </span>
             <Image
               className="hidden min-[480px]:block transform-[scaleX(-1)]"
-              src="/images/dove.svg"
+              src="./images/dove.svg"
               alt=""
               width={23}
               height={23}
