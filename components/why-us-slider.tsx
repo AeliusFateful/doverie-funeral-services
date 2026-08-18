@@ -11,12 +11,12 @@ import "swiper/css/effect-cards";
 import "swiper/css/navigation";
 
 const slides = [
-  { src: "@/public/images/why-us/main.webp", alt: "«Доверие»" },
-  { src: "@/public/images/why-us/coffin1.webp", alt: "«Доверие»" },
-  { src: "@/public/images/why-us/coffin2.webp", alt: "«Доверие»" },
-  { src: "@/public/images/why-us/clothes1.webp", alt: "«Доверие»" },
-  { src: "@/public/images/why-us/clothes2.webp", alt: "«Доверие»" },
-  { src: "@/public/images/why-us/tape1.webp", alt: "«Доверие»" },
+  { src: "./images/why-us/main.webp", alt: "«Доверие»" },
+  { src: "./images/why-us/coffin1.webp", alt: "«Доверие»" },
+  { src: "./images/why-us/coffin2.webp", alt: "«Доверие»" },
+  { src: "./images/why-us/clothes1.webp", alt: "«Доверие»" },
+  { src: "./images/why-us/clothes2.webp", alt: "«Доверие»" },
+  { src: "./images/why-us/tape1.webp", alt: "«Доверие»" },
 ] as const;
 
 export function WhyUsSlider() {

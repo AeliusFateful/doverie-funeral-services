@@ -13,7 +13,7 @@ export const processSteps: ProcessStep[] = [
     title: "Звонок",
     text: "Позвоните в любое время дня и ночи. Мы ответим спокойно и подскажем первые шаги.",
     icon: "phone",
-    image: "../../public/images/organiza.webp",
+    image: "./images/organiza.webp",
     featured: true,
   },
   {
@@ -21,7 +21,7 @@ export const processSteps: ProcessStep[] = [
     title: "Встреча агента",
     text: "Агент приедет к вам, обсудит пожелания и бюджет, ответит на все вопросы.",
     icon: "user",
-    image: "../../public/images/documents.webp",
+    image: "./images/documents.webp",
     featured: false,
   },
   {
@@ -29,7 +29,7 @@ export const processSteps: ProcessStep[] = [
     title: "Организация",
     text: "Берём на себя документы, транспорт, зал и все детали предстоящей церемонии.",
     icon: "clipboard",
-    image: "../../public/images/katafalk.webp",
+    image: "./images/katafalk.webp",
     featured: false,
   },
   {
@@ -37,7 +37,7 @@ export const processSteps: ProcessStep[] = [
     title: "Сопровождение",
     text: "Будем рядом в день прощания и останемся на связи, чтобы помочь и после.",
     icon: "handshake",
-    image: "../../public/images/zal.webp",
+    image: "./images/zal.webp",
     featured: false,
   },
 ];

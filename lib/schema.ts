@@ -16,8 +16,8 @@ function funeralHomeSchema() {
     description: siteConfig.description,
     url: siteConfig.url,
     telephone: siteConfig.phone,
-    image: `../public/images/Hero-Angel.webp`,
-    logo: `../public/images/dove.svg`,
+    image: `./images/Hero-Angel.webp`,
+    logo: `./images/dove.svg`,
     address: {
       '@type': 'PostalAddress',
       streetAddress: siteConfig.address.street,

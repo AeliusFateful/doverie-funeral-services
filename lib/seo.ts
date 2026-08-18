@@ -36,7 +36,7 @@ const geoMeta = {
 } as const
 
 const ogImage = {
-  url: '../public/images/Hero-Angel.webp',
+  url: './images/Hero-Angel.webp',
   width: 1200,
   height: 630,
   alt: `${siteConfig.name} — ритуальные услуги в ${city}`,

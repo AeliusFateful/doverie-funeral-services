@@ -36,7 +36,7 @@ export function MissionVideo() {
             <video
               ref={videoRef}
               className="h-full w-full object-cover"
-              src="@/public/videos/human.mp4"
+              src="./videos/human.mp4"
               loop
               muted
               playsInline
