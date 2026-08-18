@@ -4,4 +4,4 @@
 :HL["/doverie-funeral-services/_next/static/media/CormorantGaramond_Medium-s.p.0qe2jcp-pz3-o.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/doverie-funeral-services/_next/static/chunks/0yyorq1um-lz_.css","style"]
 :HL["/doverie-funeral-services/_next/static/chunks/0ec3zpdfn3osp.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}},"staleTime":300,"buildId":"po7JiIdaVvFf7t7upJpVY"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}},"staleTime":300,"buildId":"FOussMEqGMZAYjnhuizbu"}
