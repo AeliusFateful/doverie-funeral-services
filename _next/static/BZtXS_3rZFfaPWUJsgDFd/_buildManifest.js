@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/doverie-funeral-services//_next/:path+",
+        "destination": "/doverie-funeral-services/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
