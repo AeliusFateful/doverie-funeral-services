@@ -14,7 +14,7 @@ const slides = [
   { src: "./images/why-us/1.webp" },
   { src: "./images/why-us/2.webp" },
   { src: "./images/why-us/3.webp" },
-  { src: "./images/products/product-coffin.jpg" },
+  { src: "./images/products/product-coffin.webp" },
   { src: "./images/why-us/5.webp" },
   { src: "./images/why-us/6.webp" },
   { src: "./images/why-us/7.webp" },
