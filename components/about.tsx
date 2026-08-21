@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site";
 
 export function About() {
   return (
-    <section id="about" className="section-surface">
+    <section id="about" className="section-surface-alt">
       <div className="section-py mx-auto max-w-site px-5 md:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
@@ -27,7 +27,7 @@ export function About() {
                 </p>
               </div>
               <div className="relative mx-auto sm:min-w-[75%] md:min-w-[65%] min-w-full lg:hidden aspect-2/3">
-                <div className="relative h-full min-h-80 overflow-hidden rounded-lg border border-border bg-card/30 lg:absolute lg:inset-0 lg:min-h-0">
+                <div className="relative h-full overflow-hidden rounded-lg border border-border bg-card/30">
                   <Image
                     src={siteConfig.owner.image}
                     alt={`${siteConfig.owner.name} — владелец агентства «Доверие»`}
@@ -68,7 +68,7 @@ export function About() {
           </div>
 
           <Reveal className="relative mx-auto max-lg:hidden min-w-[70%] lg:min-w-full aspect-2/3">
-            <div className="relative h-full min-h-80 overflow-hidden rounded-lg border border-border bg-card/30 lg:absolute lg:inset-0 lg:min-h-0">
+            <div className="relative h-full overflow-hidden rounded-lg border border-border bg-card/30">
               <Image
                 src={siteConfig.owner.image}
                 alt={`${siteConfig.owner.name} — владелец агентства «Доверие»`}

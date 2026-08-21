@@ -1,44 +1,44 @@
-export type Theme = 'light' | 'dark'
+export type Theme = "light" | "dark";
 
-type ThemeListener = (theme: Theme) => void
+type ThemeListener = (theme: Theme) => void;
 
-let currentTheme: Theme = 'light'
-let initialized = false
-const listeners = new Set<ThemeListener>()
+let currentTheme: Theme = "dark";
+let initialized = false;
+const listeners = new Set<ThemeListener>();
 
 export function getTheme(): Theme {
-  return currentTheme
+  return currentTheme;
 }
 
 export function applyTheme(theme: Theme) {
-  document.documentElement.classList.toggle('dark', theme === 'dark')
-  localStorage.setItem('theme', theme)
+  document.documentElement.classList.toggle("dark", theme === "dark");
+  localStorage.setItem("theme", theme);
 
-  const meta = document.querySelector('meta[name="theme-color"]')
+  const meta = document.querySelector('meta[name="theme-color"]');
   if (meta) {
-    meta.setAttribute('content', theme === 'dark' ? '#12100e' : '#ffffff')
+    meta.setAttribute("content", theme === "dark" ? "#12100e" : "#ffffff");
   }
 }
 
 export function setTheme(theme: Theme) {
-  currentTheme = theme
-  applyTheme(theme)
-  listeners.forEach((listener) => listener(theme))
+  currentTheme = theme;
+  applyTheme(theme);
+  listeners.forEach((listener) => listener(theme));
 }
 
 export function subscribeTheme(listener: ThemeListener) {
-  listeners.add(listener)
+  listeners.add(listener);
   return () => {
-    listeners.delete(listener)
-  }
+    listeners.delete(listener);
+  };
 }
 
 export function initTheme() {
-  if (initialized || typeof window === 'undefined') return
+  if (initialized || typeof window === "undefined") return;
 
-  initialized = true
-  const stored = localStorage.getItem('theme')
-  const initial: Theme = stored === 'dark' ? 'dark' : 'light'
-  currentTheme = initial
-  applyTheme(initial)
+  initialized = true;
+  const stored = localStorage.getItem("theme");
+  const initial: Theme = stored === "light" ? "light" : "dark";
+  currentTheme = initial;
+  applyTheme(initial);
 }

@@ -3,8 +3,10 @@ export const siteConfig = {
   legalName: "Ритуальная служба «Доверие»",
   title: "Ритуальные услуги в Кемерово — агентство «Доверие»",
   description:
-    "Ритуальное агентство «Доверие» в Кемерово. Организация похорон, вызов ритуального агента, кремация, оформление документов, памятники и ритуальные товары. Похоронное бюро полного цикла. Круглосуточный выезд агента за 30–40 минут. Звонок бесплатный.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://gabimarudev.github.io/doverie-funeral-services",
+    "Ритуальное агентство «Доверие» в Кемерово. Организация похорон, вызов ритуального агента, кремация, оформление документов, памятники и ритуальные товары. Похоронное бюро полного цикла. Круглосуточный выезд агента за 15-30 минут. Звонок бесплатный.",
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    "https://gabimarudev.github.io/doverie-funeral-services",
   phone: "+79001068023",
   phoneDisplay: "+7 900 106-80-23",
   address: {
@@ -12,7 +14,7 @@ export const siteConfig = {
     city: "Кемерово",
     region: "Кемеровская область",
     country: "RU",
-    postalCode: "650000",
+    postalCode: "650052",
     full: "ул. Металлистов, 1а/3, Кемерово",
   },
   geo: {
@@ -21,7 +23,7 @@ export const siteConfig = {
     region: "RU-KEM",
   },
   owner: {
-    name: "Сергей Равильевич Гусманов",
+    name: "Гусманов Сергей Равильевич",
     jobTitle: "Владелец агентства «Доверие»",
     image: "./images/Sergey/Sergey.webp",
   },
@@ -36,7 +38,7 @@ export const siteConfig = {
   },
   openingHours: "Mo-Su 00:00-24:00",
   agentArrivalMinutes: "15–30",
-  lastUpdated: "2026-08-17",
+  lastUpdated: "2026-08-22",
   services: [
     "Организация похорон",
     "Вызов ритуального агента",

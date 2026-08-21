@@ -1,6 +1,6 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
-@import 'shadcn/tailwind.css';
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -138,7 +138,8 @@
   }
   a,
   button {
-    transition-property: color, background-color, border-color, opacity, box-shadow, filter;
+    transition-property:
+      color, background-color, border-color, opacity, box-shadow, filter;
     transition-duration: 300ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -152,6 +153,16 @@
   .section-surface-alt {
     @apply border-y border-border;
     --section-alt-bg: color-mix(in oklch, var(--card) 50%, var(--background));
+    background-color: var(--section-alt-bg);
+  }
+
+  .why-gradient {
+    @apply bg-background;
+    --section-alt-bg: color-mix(
+      in oklch,
+      var(--background) 50%,
+      var(--background)
+    );
     background-color: var(--section-alt-bg);
   }
 
@@ -231,7 +242,9 @@
   border-radius: 9999px;
   background: color-mix(in oklch, var(--foreground) 30%, transparent);
   opacity: 1;
-  transition: width 0.3s ease, background-color 0.3s ease;
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .why-us-slider-pagination .swiper-pagination-bullet-active {
@@ -249,7 +262,6 @@
 }
 
 .process-timeline-line {
-  
   background: linear-gradient(
     to right,
     transparent,

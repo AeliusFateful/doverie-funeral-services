@@ -17,13 +17,13 @@ export type ReviewPlatform = {
 export const reviewPlatforms: ReviewPlatform[] = [
   {
     name: "2ГИС",
-    rating: "5,0",
+    rating: "5.0",
     count: siteConfig.rating.countLabel,
     href: siteConfig.links.gis2,
   },
   {
     name: "Яндекс Карты",
-    rating: "5,0",
+    rating: "5.0",
     count: "Отзывы на картах",
     href: siteConfig.links.yandexMaps,
   },

@@ -44,8 +44,8 @@ export default function NotFound() {
 
         <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-lg lg:max-w-lg">
           <Image
-            src="../public/images/angel404.png"
-            alt="Ангел — страница не найдена"
+            src="./images/angel404.png"
+            alt=""
             fill
             sizes="(min-width: 1024px) 32vw, 90vw"
             quality={75}

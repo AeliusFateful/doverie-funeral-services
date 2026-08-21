@@ -1,4 +1,4 @@
-import type { IconType } from 'react-icons'
+import type { IconType } from "react-icons";
 import {
   LuChurch,
   LuClock,
@@ -25,8 +25,8 @@ import {
   LuAward,
   LuHandshake,
   LuMapPinned,
-} from 'react-icons/lu'
-import { HiStar } from 'react-icons/hi2'
+} from "react-icons/lu";
+import { HiStar } from "react-icons/hi2";
 
 export {
   LuChurch,
@@ -55,6 +55,6 @@ export {
   LuHandshake,
   LuMapPinned,
   HiStar,
-}
+};
 
-export type { IconType }
+export type { IconType };

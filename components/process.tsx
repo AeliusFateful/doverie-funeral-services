@@ -29,11 +29,10 @@ function StepCard({
           alt=""
           fill
           sizes={isFeatured ? "40vw" : "25vw"}
-          quality={75}
           loading="lazy"
           className="object-cover opacity-15 transition-opacity duration-300 ease-in-out group-hover:opacity-25"
         />
-        <div className="absolute inset-0 bg-linear-to-t from-card/95 from-55% via-card/92 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-card/75 via-card/45 to-transparent" />
       </div>
 
       <div className="relative z-10">
@@ -100,16 +99,16 @@ export function Process() {
           </p>
         </Reveal>
 
-        <div className="relative mt-8 hidden lg:block">
+        <div className="relative mt-14 hidden lg:block">
           <div
-            className="process-timeline-line absolute top-14 z-10 right-[12%] left-[12%] h-px"
+            className="process-timeline-line absolute z-10 right-[12%] left-[12%] h-px"
             aria-hidden="true"
           />
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_2.25fr] lg:items-start">
             <Reveal priority delay={100} className="group">
-              <div className="relative lg:pt-14">
+              <div className="relative">
                 <span
-                  className="absolute top-[3.35rem] left-1/2 z-10 hidden h-3.5 w-3.5 -translate-x-1/2 rounded-full border-2 border-background bg-accent lg:block"
+                  className="absolute left-1/2 z-10 hidden h-3.5 w-3.5 -translate-x-1/2 rounded-full border-2 border-background bg-accent lg:block"
                   aria-hidden="true"
                 />
                 <StepCard step={featured} variant="featured" />
@@ -123,9 +122,9 @@ export function Process() {
                   delay={(i + 2) * 100}
                   className="group flex"
                 >
-                  <div className="relative flex flex-1 flex-col pt-14">
+                  <div className="relative flex flex-1 flex-col">
                     <span
-                      className="absolute top-[3.35rem] left-1/2 z-10 h-3 w-3 -translate-x-1/2 rounded-full border-2 border-background bg-accent"
+                      className="absolute left-1/2 z-10 h-3 w-3 -translate-x-1/2 rounded-full border-2 border-background bg-accent"
                       aria-hidden="true"
                     />
                     <StepCard step={step} variant="compact" />

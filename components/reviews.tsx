@@ -4,7 +4,7 @@ import { reviewPlatforms, reviews } from "@/lib/data/reviews";
 
 export function Reviews() {
   return (
-    <section id="reviews" className="section-surface-alt">
+    <section id="reviews" className="section-surface">
       <div className="section-py mx-auto max-w-site px-5 md:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
           <Reveal>
@@ -74,10 +74,7 @@ export function Reviews() {
                         {review.source}
                       </p>
                     </div>
-                    <div
-                      className="flex gap-0.5"
-                      aria-label={`Оценка ${review.rating} из 5`}
-                    >
+                    <div className="flex gap-0.5">
                       {Array.from({ length: review.rating }).map((_, idx) => (
                         <HiStar
                           key={idx}

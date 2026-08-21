@@ -41,8 +41,8 @@ const manrope = localFont({
 export const metadata: Metadata = {
   ...rootMetadata,
   icons: {
-    icon: [{ url: "../public/icon.svg", type: "image/svg+xml" }],
-    apple: "../public/icon.svg",
+    icon: [{ url: "../icon.svg", type: "image/svg+xml" }],
+    apple: "../icon.svg",
   },
 };
 
@@ -65,11 +65,11 @@ export default function RootLayout({
     <html
       lang="ru"
       data-scroll-behavior="smooth"
-      className={`${cormorant.variable} ${manrope.variable}`}
+      className={`${cormorant.variable} ${manrope.variable} dark`}
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script async dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="antialiased bg-background font-sans">
         <JsonLd />

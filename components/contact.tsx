@@ -5,10 +5,7 @@ import { siteConfig, telHref } from "@/lib/site";
 
 export function Contact() {
   return (
-    <section
-      id="contacts"
-      className="section-surface-alt relative overflow-hidden border-t border-border"
-    >
+    <section id="contacts" className="section-surface relative overflow-hidden">
       <div className="absolute inset-0 bg-card/30" aria-hidden="true" />
       <div className="absolute inset-0 bg-linear-to-t from-background via-background/85 to-background/70" />
 

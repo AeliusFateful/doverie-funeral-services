@@ -11,12 +11,15 @@ import "swiper/css/effect-cards";
 import "swiper/css/navigation";
 
 const slides = [
-  { src: "./images/why-us/main.webp", alt: "«Доверие»" },
-  { src: "./images/why-us/coffin1.webp", alt: "«Доверие»" },
-  { src: "./images/why-us/coffin2.webp", alt: "«Доверие»" },
-  { src: "./images/why-us/clothes1.webp", alt: "«Доверие»" },
-  { src: "./images/why-us/clothes2.webp", alt: "«Доверие»" },
-  { src: "./images/why-us/tape1.webp", alt: "«Доверие»" },
+  { src: "./images/why-us/1.webp" },
+  { src: "./images/why-us/2.webp" },
+  { src: "./images/why-us/3.webp" },
+  { src: "./images/products/product-coffin.jpg" },
+  { src: "./images/why-us/5.webp" },
+  { src: "./images/why-us/6.webp" },
+  { src: "./images/why-us/7.webp" },
+  { src: "./images/why-us/8.webp" },
+  { src: "./images/why-us/9.webp" },
 ] as const;
 
 export function WhyUsSlider() {
@@ -36,7 +39,7 @@ export function WhyUsSlider() {
         modules={[EffectCards, Navigation]}
         effect="cards"
         grabCursor
-        cardsEffect={{ perSlideRotate: 4, slideShadows: false }}
+        cardsEffect={{ perSlideRotate: 5, slideShadows: false }}
         navigation={{
           prevEl: ".why-us-slider-prev",
           nextEl: ".why-us-slider-next",
@@ -53,14 +56,12 @@ export function WhyUsSlider() {
           <SwiperSlide key={slide.src}>
             <Image
               src={slide.src}
-              alt={slide.alt}
-              width={800}
-              height={1000}
-              quality={75}
-              loading={i === 0 ? "eager" : "lazy"}
-              className="aspect-3/4 w-[70%] rounded-2xl object-cover lg:w-full"
+              alt=""
+              width={500}
+              height={650}
+              loading="lazy"
+              className="aspect-3/4 w-[70%] rounded-lg sm:rounded-2xl object-cover lg:w-full"
               sizes="(min-width: 1024px) 28vw, 70vw"
-              priority={i === 0}
             />
           </SwiperSlide>
         ))}

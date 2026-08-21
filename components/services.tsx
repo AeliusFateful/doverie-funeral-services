@@ -37,16 +37,15 @@ export function Services() {
                     alt=""
                     fill
                     sizes="(min-width: 1024px) 20vw, 50vw"
-                    quality={75}
                     loading="lazy"
-                    className="object-cover opacity-25 transition-opacity duration-500 ease-in-out group-hover:opacity-35"
+                    className="object-cover opacity-25 transition-all duration-600 ease-in-out group-hover:opacity-35 group-hover:scale-[105%]"
                   />
                   <div className="absolute inset-0 bg-linear-to-r from-background via-background/60 to-transparent transition-colors duration-300 group-hover:from-card/40 group-hover:via-card/40" />
                   <div className="absolute inset-0 bg-linear-to-t from-background/75 via-transparent to-transparent transition-colors duration-300 group-hover:from-card/40" />
                 </div>
 
                 <div className="relative z-10">
-                  <Icon className="h-8 w-8 text-accent" aria-hidden="true" />
+                  <Icon className="h-5 w-5 text-accent" aria-hidden="true" />
                   <h3 className="mt-6 font-serif text-xl text-foreground">
                     {service.title}
                   </h3>

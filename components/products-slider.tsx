@@ -42,9 +42,9 @@ export function ProductsSlider({ products }: ProductsSliderProps) {
         watchOverflow
         speed={600}
         autoplay={{
-          delay: 1200,
+          delay: 2000,
           disableOnInteraction: false,
-          pauseOnMouseEnter: false,
+          pauseOnMouseEnter: true,
         }}
         onTouchStart={pauseAutoplay}
         onTouchEnd={resumeAutoplay}

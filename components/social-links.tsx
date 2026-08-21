@@ -16,7 +16,7 @@ export function SocialLinks({
   iconClassName?: string;
 }) {
   return (
-    <div className={cn("flex items-center gap-3", className)}>
+    <div className={cn("flex items-center gap-4", className)}>
       {socialLinks.map((link) => {
         const Icon = icons[link.name];
         return (

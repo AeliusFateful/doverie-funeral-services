@@ -8,7 +8,7 @@ const footerNavMid = Math.ceil(navFooter.length / 2);
 
 export function SiteFooter() {
   return (
-    <footer className="section-surface border-t border-border">
+    <footer className="section-surface-alt border-t border-border">
       <div className="section-py mx-auto max-w-site px-5 md:px-8">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-sm">

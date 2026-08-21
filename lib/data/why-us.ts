@@ -1,3 +1,5 @@
+import { siteConfig } from "../site";
+
 export type WhyUsReason = {
   icon: "clock" | "scale" | "shield" | "handshake" | "route";
   title: string;
@@ -8,7 +10,7 @@ export const whyUsReasons: WhyUsReason[] = [
   {
     icon: "clock",
     title: "Круглосуточно, без выходных",
-    text: "Отвечаем на звонок в любое время дня и ночи. Агент приезжает в течение 30–40 минут.",
+    text: `Отвечаем на звонок в любое время дня и ночи. Агент приезжает в течение ${siteConfig.agentArrivalMinutes} минут.`,
   },
   {
     icon: "scale",

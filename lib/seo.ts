@@ -1,7 +1,7 @@
-import type { Metadata } from 'next'
-import { siteConfig } from '../lib/site'
+import type { Metadata } from "next";
+import { siteConfig } from "../lib/site";
 
-const city = siteConfig.address.city
+const city = siteConfig.address.city;
 
 export const seoKeywords = [
   `ритуальные услуги ${city}`,
@@ -11,6 +11,8 @@ export const seoKeywords = [
   `ритуальное агентство ${city}`,
   `ритуальная служба ${city}`,
   `похороны ${city}`,
+  `похоронные услуги`,
+  `похороные услуги ${city}`,
   `ритуальные услуги в ${city}`,
   `организация похорон в ${city}`,
   `ритуальный агент ${city}`,
@@ -18,29 +20,32 @@ export const seoKeywords = [
   `ритуальные товары ${city}`,
   `памятники ${city}`,
   `гробы ${city}`,
+  `венки ${city}`,
+  `кресты ${city}`,
   `катафалк ${city}`,
   `оформление документов похорон ${city}`,
   `круглосуточные ритуальные услуги ${city}`,
   `${siteConfig.name} ритуальные услуги`,
-  'ритуальные услуги',
-  'организация похорон',
-  'вызов ритуального агента',
-  'похоронное бюро',
-] as const
+  `ритуальные услуги ${siteConfig.name}`,
+  "ритуальные услуги",
+  "организация похорон",
+  "вызов ритуального агента",
+  "похоронное бюро",
+] as const;
 
 const geoMeta = {
-  'geo.region': siteConfig.geo.region,
-  'geo.placename': city,
-  'geo.position': `${siteConfig.geo.lat};${siteConfig.geo.lon}`,
+  "geo.region": siteConfig.geo.region,
+  "geo.placename": city,
+  "geo.position": `${siteConfig.geo.lat};${siteConfig.geo.lon}`,
   ICBM: `${siteConfig.geo.lat}, ${siteConfig.geo.lon}`,
-} as const
+} as const;
 
 const ogImage = {
-  url: './images/Hero-Angel.webp',
-  width: 1200,
-  height: 630,
+  url: "./images/dove.svg",
+  width: 512,
+  height: 512,
   alt: `${siteConfig.name} — ритуальные услуги в ${city}`,
-} as const
+} as const;
 
 export const rootMetadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -53,16 +58,16 @@ export const rootMetadata: Metadata = {
   authors: [{ name: siteConfig.legalName }],
   creator: siteConfig.legalName,
   publisher: siteConfig.legalName,
-  category: 'business',
+  category: "business",
   alternates: {
     canonical: siteConfig.url,
     languages: {
-      'ru-RU': siteConfig.url,
+      "ru-RU": siteConfig.url,
     },
   },
   openGraph: {
-    type: 'website',
-    locale: 'ru_RU',
+    type: "website",
+    locale: "ru_RU",
     url: siteConfig.url,
     siteName: siteConfig.name,
     title: siteConfig.title,
@@ -70,7 +75,7 @@ export const rootMetadata: Metadata = {
     images: [ogImage],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
     images: [ogImage.url],
@@ -81,12 +86,12 @@ export const rootMetadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   other: { ...geoMeta },
-}
+};
 
 export function createPageMetadata({
   title,
@@ -94,12 +99,12 @@ export function createPageMetadata({
   path,
   noIndex = false,
 }: {
-  title: string
-  description: string
-  path: string
-  noIndex?: boolean
+  title: string;
+  description: string;
+  path: string;
+  noIndex?: boolean;
 }): Metadata {
-  const url = `${siteConfig.url}${path}`
+  const url = `${siteConfig.url}${path}`;
 
   return {
     title,
@@ -119,5 +124,5 @@ export function createPageMetadata({
     ...(noIndex && {
       robots: { index: false, follow: false },
     }),
-  }
+  };
 }

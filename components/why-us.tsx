@@ -5,7 +5,7 @@ import { getWhyUsIcon } from "@/lib/icon-maps";
 
 export function WhyUs() {
   return (
-    <section id="why" className="section-surface-alt relative overflow-hidden">
+    <section id="why" className="why-gradient relative overflow-hidden">
       <div className="section-py relative mx-auto max-w-site px-5 md:px-8">
         <Reveal className="max-w-2xl">
           <p className="section-label mb-5 flex items-center gap-3 text-right text-accent">
@@ -18,11 +18,11 @@ export function WhyUs() {
         </Reveal>
 
         <div className="relative mt-10 flex flex-col max-[350]:gap-0 gap-10 lg:flex-row lg:items-stretch">
-          <Reveal className="relative z-1 h-full w-full shrink-0 lg:w-[46%]">
+          <Reveal className="relative h-full w-full lg:w-[46%]">
             <WhyUsSlider />
           </Reveal>
           <div
-            className="why-us-fade-overlay absolute inset-y-0 right-0 z-5 hidden lg:block"
+            className="why-us-fade-overlay absolute inset-y-0 right-0 z-10 hidden lg:block"
             style={{ left: "0%" }}
             aria-hidden="true"
           />
