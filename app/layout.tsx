@@ -35,7 +35,7 @@ const manrope = localFont({
   display: "swap",
   weight: "200 800",
   adjustFontFallback: "Arial",
-  preload: false,
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -69,6 +69,12 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <link
+          rel="preload"
+          as="image"
+          href="./images/Hero-Angel.webp"
+          fetchPriority="high"
+        />
         <script async dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="antialiased bg-background font-sans">

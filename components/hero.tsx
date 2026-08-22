@@ -1,7 +1,6 @@
 import { HiStar, LuMapPin, LuPhone } from "@/lib/icons";
 import { siteConfig } from "@/lib/site";
 import { SocialLinks } from "@/components/social-links";
-import { HeroVideo } from "./hero-video";
 
 export function Hero() {
   return (
@@ -13,7 +12,16 @@ export function Hero() {
         className="absolute inset-y-0 right-0 hidden w-[65%] lg:block"
         aria-hidden="true"
       >
-        <HeroVideo />
+        <video
+          className="absolute inset-0 h-full w-full object-cover object-[25%_30%]"
+          src="./videos/HeroVideo.mp4"
+          poster="./images/Hero-Angel.webp"
+          preload="auto"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
         <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-background via-background/20 to-transparent" />
         <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-background via-transparent to-background/0" />
       </div>

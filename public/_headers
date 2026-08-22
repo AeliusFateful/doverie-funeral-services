@@ -1,0 +1,27 @@
+# Cache-control rules for static assets — 30 days (2592000s).
+#
+# This file is picked up automatically by Netlify and Cloudflare Pages
+# (copied into `out/_headers` on `next build`/export). It has NO effect
+# on GitHub Pages, which does not support custom response headers.
+#
+# When moving to a different host:
+# - Vercel: port these rules into `headers()` in next.config.mjs
+#   (requires dropping `output: "export"`, since headers() needs the
+#   Node/Edge runtime rather than a static export).
+# - Nginx/Apache: add equivalent `Cache-Control` directives to the
+#   `location` blocks (or .htaccess) matching the paths below.
+
+/videos/*
+  Cache-Control: public, max-age=2592000, immutable
+
+/images/*
+  Cache-Control: public, max-age=2592000, immutable
+
+/Manrope/*
+  Cache-Control: public, max-age=2592000, immutable
+
+/Cormorant Garamond/*
+  Cache-Control: public, max-age=2592000, immutable
+
+/_next/static/*
+  Cache-Control: public, max-age=2592000, immutable

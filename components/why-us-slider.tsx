@@ -50,7 +50,6 @@ export function WhyUsSlider() {
           dynamicBullets: true,
         }}
         className="h-full w-full overflow-hidden rounded-2xl"
-        aria-label="Фотографии агентства"
       >
         {slides.map((slide, i) => (
           <SwiperSlide key={slide.src}>
