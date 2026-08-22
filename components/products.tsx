@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import { Reveal } from "@/components/reveal";
 import { products } from "@/lib/data/products";
 import { siteConfig, telHref } from "@/lib/site";
 
@@ -16,7 +15,7 @@ export function Products() {
   return (
     <section id="products" className="section-surface-alt">
       <div className="section-py mx-auto max-w-site px-5 md:px-8">
-        <Reveal className="max-w-2xl">
+        <div className="max-w-2xl">
           <p className="section-label mb-5 flex items-center gap-3 text-accent">
             <span className="h-px w-8 bg-accent/60" />
             Ритуальные принадлежности
@@ -29,16 +28,13 @@ export function Products() {
             Возможно изготовление изделий на заказ по вашим индивидуальным
             пожеланиям.
           </p>
-        </Reveal>
+        </div>
 
-        <Reveal delay={100} className="relative mt-10 px-1 sm:px-2">
+        <div className="relative mt-10 px-1 sm:px-2">
           <ProductsSlider products={products} />
-        </Reveal>
+        </div>
 
-        <Reveal
-          delay={200}
-          className="mt-10 max-sm:items-center max-sm:text-center flex flex-col items-start gap-4 rounded-lg border border-border bg-card/40 p-8 sm:flex-row sm:items-center sm:justify-between"
-        >
+        <div className="mt-10 max-sm:items-center max-sm:text-center flex flex-col items-start gap-4 rounded-lg border border-border bg-card/40 p-8 sm:flex-row sm:items-center sm:justify-between">
           <div className="max-w-xl text-pretty text-base leading-relaxed">
             <p className="text-foreground font-light">
               Не нашли нужное?{" "}
@@ -55,7 +51,7 @@ export function Products() {
           >
             Закажите индивидуально
           </a>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

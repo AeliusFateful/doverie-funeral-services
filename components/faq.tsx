@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { LuPlus } from "@/lib/icons";
-import { Reveal } from "@/components/reveal";
 import { faqs } from "@/lib/data/faq";
 import { cn } from "@/lib/utils";
 
@@ -15,7 +14,7 @@ export function Faq() {
       className="section-surface-alt px-5 py-12 md:px-8 md:py-16"
     >
       <div className="max-w-4xl mx-auto">
-        <Reveal className="text-center">
+        <div className="text-center">
           <p className="section-label mb-5 flex items-center justify-center gap-3 text-accent">
             <span className="h-px w-8 bg-accent/60" />
             Частые вопросы
@@ -23,7 +22,7 @@ export function Faq() {
           <h2 className="font-serif text-3xl font-light leading-tight tracking-tight text-balance text-foreground md:text-5xl">
             Отвечаем на важные вопросы
           </h2>
-        </Reveal>
+        </div>
 
         <div
           className="mt-14 divide-y divide-border border-y border-border"
@@ -38,27 +37,25 @@ export function Faq() {
                 key={item.q}
                 className="overflow-clip lg:overflow-visible"
               >
-                <Reveal>
-                  <button
-                    id={buttonId}
-                    type="button"
-                    onClick={() => setOpen(isOpen ? null : i)}
-                    aria-expanded={isOpen}
-                    aria-controls={panelId}
-                    className="flex w-full items-center justify-between gap-6 py-6 text-left"
-                  >
-                    <span className="font-serif text-xl text-foreground md:text-2xl">
-                      {item.q}
-                    </span>
-                    <LuPlus
-                      className={cn(
-                        "h-5 w-5 shrink-0 text-accent transition-transform duration-300 ease-in-out",
-                        isOpen && "rotate-45",
-                      )}
-                      aria-hidden="true"
-                    />
-                  </button>
-                </Reveal>
+                <button
+                  id={buttonId}
+                  type="button"
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                  aria-controls={panelId}
+                  className="flex w-full items-center justify-between gap-6 py-6 text-left"
+                >
+                  <span className="font-serif text-xl text-foreground md:text-2xl">
+                    {item.q}
+                  </span>
+                  <LuPlus
+                    className={cn(
+                      "h-5 w-5 shrink-0 text-accent transition-transform duration-300 ease-in-out",
+                      isOpen && "rotate-45",
+                    )}
+                    aria-hidden="true"
+                  />
+                </button>
                 <div
                   id={panelId}
                   role="region"

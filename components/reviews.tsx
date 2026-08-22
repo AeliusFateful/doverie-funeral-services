@@ -1,5 +1,4 @@
 import { HiStar, LuQuote } from "@/lib/icons";
-import { Reveal } from "@/components/reveal";
 import { reviewPlatforms, reviews } from "@/lib/data/reviews";
 
 export function Reviews() {
@@ -7,7 +6,7 @@ export function Reviews() {
     <section id="reviews" className="section-surface">
       <div className="section-py mx-auto max-w-site px-5 md:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
-          <Reveal>
+          <div>
             <p className="section-label mb-5 flex items-center gap-3 text-accent">
               <span className="h-px w-8 bg-accent/60" />
               Отзывы
@@ -48,15 +47,11 @@ export function Reviews() {
                 </a>
               ))}
             </div>
-          </Reveal>
+          </div>
 
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            {reviews.map((review, i) => (
-              <Reveal
-                className="max-sm:last:hidden"
-                key={review.name}
-                delay={i * 80}
-              >
+            {reviews.map((review) => (
+              <div key={review.name} className="max-sm:last:hidden">
                 <figure className="flex h-full flex-col rounded-lg border border-border bg-background p-6">
                   <LuQuote
                     className="h-6 w-6 text-accent/50"
@@ -85,7 +80,7 @@ export function Reviews() {
                     </div>
                   </figcaption>
                 </figure>
-              </Reveal>
+              </div>
             ))}
           </div>
         </div>

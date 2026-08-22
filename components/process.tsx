@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { LuPhone } from "@/lib/icons";
-import { Reveal } from "@/components/reveal";
 import { processSteps } from "@/lib/data/process";
 import { getProcessIcon } from "@/lib/icon-maps";
 import { siteConfig, telHref } from "@/lib/site";
@@ -85,7 +84,7 @@ export function Process() {
   return (
     <section id="process" className="section-surface-alt">
       <div className="section-py mx-auto max-w-site px-5 md:px-8">
-        <Reveal priority className="max-w-2xl">
+        <div className="max-w-2xl">
           <p className="section-label mb-5 flex items-center gap-3 text-accent">
             <span className="h-px w-8 bg-accent/60" />
             Как мы работаем
@@ -97,7 +96,7 @@ export function Process() {
             <LuPhone className="h-4 w-4 shrink-0" aria-hidden="true" />
             Агент приедет за {siteConfig.agentArrivalMinutes} минут после звонка
           </p>
-        </Reveal>
+        </div>
 
         <div className="relative mt-14 hidden lg:block">
           <div
@@ -105,7 +104,7 @@ export function Process() {
             aria-hidden="true"
           />
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_2.25fr] lg:items-start">
-            <Reveal priority delay={100} className="group">
+            <div className="group">
               <div className="relative">
                 <span
                   className="absolute left-1/2 z-10 hidden h-3.5 w-3.5 -translate-x-1/2 rounded-full border-2 border-background bg-accent lg:block"
@@ -113,15 +112,11 @@ export function Process() {
                 />
                 <StepCard step={featured} variant="featured" />
               </div>
-            </Reveal>
+            </div>
 
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 lg:items-stretch">
-              {rest.map((step, i) => (
-                <Reveal
-                  key={step.n}
-                  delay={(i + 2) * 100}
-                  className="group flex"
-                >
+              {rest.map((step) => (
+                <div key={step.n} className="group flex">
                   <div className="relative flex flex-1 flex-col">
                     <span
                       className="absolute left-1/2 z-10 h-3 w-3 -translate-x-1/2 rounded-full border-2 border-background bg-accent"
@@ -129,7 +124,7 @@ export function Process() {
                     />
                     <StepCard step={step} variant="compact" />
                   </div>
-                </Reveal>
+                </div>
               ))}
             </div>
           </div>
@@ -141,12 +136,8 @@ export function Process() {
             aria-hidden="true"
           />
           <div className="flex flex-col gap-10">
-            {processSteps.map((step, i) => (
-              <Reveal
-                key={step.n}
-                delay={i * 100}
-                className="group relative pl-8"
-              >
+            {processSteps.map((step) => (
+              <div key={step.n} className="group relative pl-8">
                 <span
                   className="absolute top-6 left-0 z-10 flex h-[1.35rem] w-[1.35rem] items-center justify-center rounded-full border-2 border-background bg-accent"
                   aria-hidden="true"
@@ -157,7 +148,7 @@ export function Process() {
                   step={step}
                   variant={step.featured ? "featured" : "mobile"}
                 />
-              </Reveal>
+              </div>
             ))}
           </div>
         </div>

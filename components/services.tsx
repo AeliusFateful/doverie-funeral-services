@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Reveal } from "@/components/reveal";
 import { services } from "@/lib/data/services";
 import { getServiceIcon } from "@/lib/icon-maps";
 
@@ -7,7 +6,7 @@ export function Services() {
   return (
     <section id="services" className="section-surface">
       <div className="section-py mx-auto max-w-site px-5 md:px-8">
-        <Reveal className="max-w-2xl">
+        <div className="max-w-2xl">
           <p className="section-label mb-5 flex items-center gap-3 text-accent">
             <span className="h-px w-8 bg-accent/60" />
             Что мы берём на себя
@@ -15,12 +14,9 @@ export function Services() {
           <h2 className="font-serif text-3xl font-light leading-tight tracking-tight text-balance text-foreground md:text-5xl">
             Полный спектр ритуальных услуг
           </h2>
-        </Reveal>
+        </div>
 
-        <Reveal
-          delay={100}
-          className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2 lg:grid-cols-3"
-        >
+        <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => {
             const Icon = getServiceIcon(service.icon);
             return (
@@ -56,7 +52,7 @@ export function Services() {
               </div>
             );
           })}
-        </Reveal>
+        </div>
       </div>
     </section>
   );

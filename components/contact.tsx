@@ -1,5 +1,4 @@
 import { LuMapPin, LuPhone } from "@/lib/icons";
-import { Reveal } from "@/components/reveal";
 import { SocialLinks } from "@/components/social-links";
 import { siteConfig, telHref } from "@/lib/site";
 
@@ -11,7 +10,7 @@ export function Contact() {
 
       <div className="relative section-py mx-auto max-w-site px-5 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <Reveal>
+          <div>
             <p className="section-label mb-5 flex items-center justify-center gap-3 text-accent">
               <span className="h-px w-8 bg-accent/60 max-sm:hidden" />
               Мы рядом в&nbsp;трудную&nbsp;минуту
@@ -23,9 +22,9 @@ export function Contact() {
               Дежурный агент ответит немедленно и подскажет, что делать дальше.
               Звонок бесплатный и ни к чему не обязывает.
             </p>
-          </Reveal>
+          </div>
 
-          <Reveal delay={80}>
+          <div>
             <a
               href={telHref(siteConfig.phone)}
               className="mt-10 btn-accent gap-3 px-8 py-4 text-base"
@@ -34,13 +33,10 @@ export function Contact() {
               <span className="tabular-nums">{siteConfig.phoneDisplay}</span>
             </a>
             <SocialLinks className="mt-8 justify-center" />
-          </Reveal>
+          </div>
         </div>
 
-        <Reveal
-          delay={160}
-          className="mx-auto mt-12 max-w-xl overflow-hidden rounded-lg border border-border bg-border"
-        >
+        <div className="mx-auto mt-12 max-w-xl overflow-hidden rounded-lg border border-border bg-border">
           <a
             href={siteConfig.links.gis2}
             target="_blank"
@@ -55,7 +51,7 @@ export function Contact() {
               {siteConfig.address.full}
             </span>
           </a>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

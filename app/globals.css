@@ -174,24 +174,8 @@
     @apply inline-flex items-center justify-center rounded-md bg-accent font-medium text-accent-foreground transition-all duration-300 ease-in-out hover:scale-[1.06] hover:brightness-[1.45] hover:saturate-110 active:scale-[0.98];
   }
 
-  .reveal {
-    @apply translate-y-2 opacity-0 transition-[opacity,transform] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-[opacity,transform];
-  }
-
-  .reveal-visible {
-    @apply translate-y-0 opacity-100;
-  }
-
   .section-label {
     @apply text-[0.8125rem] uppercase tracking-[0.28em] leading-5 md:text-sm;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
   }
 }
 
