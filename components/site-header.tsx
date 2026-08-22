@@ -87,10 +87,10 @@ export function SiteHeader() {
               <LuPhone className="h-4 w-4" aria-hidden="true" />
             </span>
             <div className="flex min-w-0 flex-col leading-tight">
-              <span className="truncate text-xs tabular-nums min-[480px]:text-sm sm:text-base">
+              <span className="truncate text-sm tabular-nums sm:text-base">
                 {siteConfig.phoneDisplay}
               </span>
-              <span className="truncate uppercase text-[9px] tracking-[0.25em] text-muted-foreground/70 transition-colors duration-300 ease-in-out group-hover:text-accent min-[480px]:text-[10px] sm:text-xs">
+              <span className="truncate uppercase text-[10.5px] tracking-[0.25em] text-muted-foreground/70 transition-colors duration-300 ease-in-out group-hover:text-accent sm:text-xs">
                 Круглосуточно
               </span>
             </div>
