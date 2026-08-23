@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { CookieBanner } from "../components/cookie-banner";
 import { JsonLd } from "../components/json-ld";
 import { rootMetadata } from "../lib/seo";
 import "./globals.css";
@@ -66,13 +67,14 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="./images/Hero-Angel.webp"
+          href="./images/hero/Hero-Angel.webp"
           fetchPriority="high"
         />
       </head>
       <body className="antialiased bg-background font-sans">
         <JsonLd />
         {children}
+        <CookieBanner />
       </body>
     </html>
   );

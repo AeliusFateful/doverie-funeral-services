@@ -5,12 +5,12 @@ import { siteConfig, telHref } from "@/lib/site";
 export function Contact() {
   return (
     <section id="contacts" className="section-surface relative overflow-hidden">
-      <img
-        src="./images/background/candles-row.webp"
-        alt=""
-        className="pointer-events-none select-none absolute inset-0 object-cover opacity-10 w-full h-full"
-      />
-      <div className="relative section-py mx-auto max-w-site px-5 md:px-8">
+      <div className="relative z-1 section-py mx-auto max-w-site px-5 md:px-8">
+        <img
+          src="./images/candle.jpg"
+          alt=""
+          className="pointer-events-none select-none absolute inset-0 object-cover opacity-8 w-full h-full -z-1"
+        />
         <div className="mx-auto max-w-2xl text-center">
           <div>
             <p className="section-label mb-5 flex items-center justify-center gap-3 text-accent">
