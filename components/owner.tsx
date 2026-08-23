@@ -3,9 +3,9 @@ import { aboutValues } from "@/lib/data/about";
 import { getAboutIcon } from "@/lib/icon-maps";
 import { siteConfig } from "@/lib/site";
 
-export function About() {
+export function Owner() {
   return (
-    <section id="about" className="section-surface-alt">
+    <section id="about" className="section-surface-alt relative z-5">
       <div className="section-py mx-auto max-w-site px-5 md:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
@@ -32,7 +32,6 @@ export function About() {
                     alt={`${siteConfig.owner.name} — владелец агентства «Доверие»`}
                     fill
                     sizes="(min-width: 1024px) 22rem, 90vw"
-                    quality={75}
                     loading="lazy"
                     className="object-cover object-top"
                   />
@@ -44,7 +43,10 @@ export function About() {
               {aboutValues.map((value) => {
                 const Icon = getAboutIcon(value.icon);
                 return (
-                  <div key={value.title} className="flex items-start gap-5 py-6">
+                  <div
+                    key={value.title}
+                    className="flex items-start gap-5 py-6"
+                  >
                     <span className="mt-0.5 flex h-11 w-11 flex-none items-center justify-center rounded-md border border-accent/30 text-accent">
                       <Icon className="h-5 w-5" aria-hidden="true" />
                     </span>
@@ -69,7 +71,6 @@ export function About() {
                 alt={`${siteConfig.owner.name} — владелец агентства «Доверие»`}
                 fill
                 sizes="(min-width: 1024px) 22rem, 90vw"
-                quality={75}
                 loading="lazy"
                 className="object-cover object-top"
               />
