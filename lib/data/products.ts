@@ -37,13 +37,13 @@ export const products: ProductItem[] = [
     price: "от 2 990 ₽",
   },
   {
-    image: "./images/products/product-monument.webp",
+    image: "./images/products/pamyat.webp",
     title: "Памятники",
     text: "Гранит и мрамор, гравировка портрета, изготовление и установка.",
     price: "от 9 990 ₽",
   },
   {
-    image: "./images/products/product-urn.webp",
+    image: "./images/products/product-urn.jpg",
     title: "Урны и принадлежности",
     text: "Урны для праха, таблички, покрывала и сопутствующие товары.",
     price: "от 990 ₽",

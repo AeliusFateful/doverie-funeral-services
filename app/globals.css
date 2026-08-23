@@ -2,8 +2,6 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -49,42 +47,6 @@
 }
 
 :root {
-  color-scheme: light;
-  --background: oklch(0.955 0.009 75);
-  --foreground: oklch(0 0 0);
-  --card: oklch(0.975 0.007 75);
-  --card-foreground: oklch(0 0 0);
-  --popover: oklch(0.975 0.007 75);
-  --popover-foreground: oklch(0 0 0);
-  --primary: oklch(0 0 0);
-  --primary-foreground: oklch(0.98 0.005 75);
-  --secondary: oklch(0.925 0.012 75);
-  --secondary-foreground: oklch(0 0 0);
-  --muted: oklch(0.925 0.012 75);
-  --muted-foreground: oklch(0.42 0.018 75);
-  --accent: oklch(0.8 0.075 76);
-  --accent-foreground: oklch(0.19 0.01 70);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.78 0.018 75);
-  --input: oklch(0.78 0.018 75);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
-
-.dark {
   color-scheme: dark;
   --background: oklch(0.17 0.006 70);
   --foreground: oklch(0.93 0.008 75);
@@ -109,6 +71,7 @@
   --chart-3: oklch(0.5 0.01 75);
   --chart-4: oklch(0.4 0.008 70);
   --chart-5: oklch(0.3 0.008 70);
+  --radius: 0.625rem;
   --sidebar: oklch(0.21 0.007 70);
   --sidebar-foreground: oklch(0.93 0.008 75);
   --sidebar-primary: oklch(0.8 0.075 76);
@@ -130,10 +93,7 @@
   body {
     @apply bg-background text-foreground text-[1.125rem] leading-relaxed md:text-[1.1875rem];
   }
-  :root:not(.dark) .font-serif {
-    font-weight: 700;
-  }
-  .dark .font-serif.font-light {
+  .font-serif.font-light {
     font-weight: 300;
   }
   a,

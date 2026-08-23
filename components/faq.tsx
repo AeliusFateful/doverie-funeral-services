@@ -11,9 +11,14 @@ export function Faq() {
   return (
     <section
       id="faq"
-      className="section-surface-alt px-5 py-12 md:px-8 md:py-16"
+      className="section-surface-alt px-5 py-12 md:px-8 md:py-16 relative z-1"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className=" max-w-4xl mx-auto">
+        <img
+          src="./images/background/white-lilies.webp"
+          alt=""
+          className="pointer-events-none select-none absolute right-0 top-60 w-200 -z-1 opacity-10"
+        />
         <div className="text-center">
           <p className="section-label mb-5 flex items-center justify-center gap-3 text-accent">
             <span className="h-px w-8 bg-accent/60" />
@@ -24,19 +29,14 @@ export function Faq() {
           </h2>
         </div>
 
-        <div
-          className="mt-14 divide-y divide-border border-y border-border"
-        >
+        <div className="mt-14 divide-y divide-border border-y border-border">
           {faqs.map((item, i) => {
             const isOpen = open === i;
             const panelId = `faq-panel-${i}`;
             const buttonId = `faq-button-${i}`;
 
             return (
-              <div
-                key={item.q}
-                className="overflow-clip lg:overflow-visible"
-              >
+              <div key={item.q} className="overflow-clip lg:overflow-visible">
                 <button
                   id={buttonId}
                   type="button"

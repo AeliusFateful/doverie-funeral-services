@@ -5,7 +5,12 @@ import { getServiceIcon } from "@/lib/icon-maps";
 export function Services() {
   return (
     <section id="services" className="section-surface">
-      <div className="section-py mx-auto max-w-site px-5 md:px-8">
+      <div className="relative section-py mx-auto max-w-site px-5 md:px-8 z-1">
+        <img
+          src="./images/background/doves.webp"
+          alt=""
+          className="pointer-events-none select-none absolute opacity-30 top-0 -left-52 w-150 -z-1"
+        />
         <div className="max-w-2xl">
           <p className="section-label mb-5 flex items-center gap-3 text-accent">
             <span className="h-px w-8 bg-accent/60" />
@@ -25,7 +30,7 @@ export function Services() {
                 className="group relative overflow-hidden bg-background p-8 transition-colors duration-500 ease-in-out hover:bg-card/40"
               >
                 <div
-                  className="pointer-events-none absolute inset-y-0 right-0 w-full"
+                  className="pointer-events-none select-none absolute inset-y-0 right-0 w-full"
                   aria-hidden="true"
                 >
                   <Image

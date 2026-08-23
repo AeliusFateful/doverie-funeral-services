@@ -47,14 +47,9 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  colorScheme: "light dark",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#12100e" },
-  ],
+  colorScheme: "dark",
+  themeColor: "#12100e",
 };
-
-const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.classList.add('dark');}catch(e){}})();`;
 
 export default function RootLayout({
   children,
@@ -65,8 +60,7 @@ export default function RootLayout({
     <html
       lang="ru"
       data-scroll-behavior="smooth"
-      className={`${cormorant.variable} ${manrope.variable} dark`}
-      suppressHydrationWarning
+      className={`${cormorant.variable} ${manrope.variable}`}
     >
       <head>
         <link
@@ -75,7 +69,6 @@ export default function RootLayout({
           href="./images/Hero-Angel.webp"
           fetchPriority="high"
         />
-        <script async dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="antialiased bg-background font-sans">
         <JsonLd />

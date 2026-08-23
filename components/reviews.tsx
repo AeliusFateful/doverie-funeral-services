@@ -6,7 +6,7 @@ export function Reviews() {
     <section id="reviews" className="section-surface">
       <div className="section-py mx-auto max-w-site px-5 md:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
-          <div>
+          <div className="relative z-1">
             <p className="section-label mb-5 flex items-center gap-3 text-accent">
               <span className="h-px w-8 bg-accent/60" />
               Отзывы
@@ -47,6 +47,11 @@ export function Reviews() {
                 </a>
               ))}
             </div>
+            <img
+              src="./images/background/hero-candle.webp"
+              alt=""
+              className="pointer-events-none absolute -z-1 opacity-25 max-lg:aspect-square max-lg:object-cover max-lg:bg-bottom max-lg:right-0 max-lg:-top-38 lg:-bottom-16 hidden sm:block w-80 lg:w-110 select-none"
+            />
           </div>
 
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">

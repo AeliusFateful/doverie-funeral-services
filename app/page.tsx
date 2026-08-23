@@ -4,7 +4,7 @@ import { Hero } from "../components/hero";
 import { Process } from "../components/process";
 import { Services } from "../components/services";
 import { Products } from "../components/products";
-import { About } from "../components/about";
+import { Owner } from "../components/owner";
 import { Reviews } from "../components/reviews";
 import { Contact } from "../components/contact";
 import { SiteFooter } from "../components/site-footer";
@@ -38,7 +38,7 @@ export default function Page() {
         <Services />
         <Products />
         <WhyUs />
-        <About />
+        <Owner />
         <Reviews />
         <Faq />
         <Contact />

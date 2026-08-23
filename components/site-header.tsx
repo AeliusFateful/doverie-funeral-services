@@ -6,7 +6,6 @@ import Link from "next/link";
 import { LuMenu, LuPhone, LuX } from "@/lib/icons";
 import { navDesktop, navMobile } from "@/lib/nav";
 import { siteConfig } from "@/lib/site";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
@@ -40,7 +39,7 @@ export function SiteHeader() {
         >
           <div className="flex items-center gap-1">
             <Image
-              className="hidden min-[480px]:block"
+              className="pointer-events-none select-none hidden min-[420px]:block"
               src="./images/dove.svg"
               alt=""
               width={23}
@@ -50,14 +49,14 @@ export function SiteHeader() {
               Доверие
             </span>
             <Image
-              className="hidden min-[480px]:block transform-[scaleX(-1)]"
+              className="pointer-events-none select-none hidden min-[420px]:block transform-[scaleX(-1)]"
               src="./images/dove.svg"
               alt=""
               width={23}
               height={23}
             />
           </div>
-          <span className="hidden text-[11px] uppercase tracking-[0.24em] text-muted-foreground sm:inline">
+          <span className="hidden max-[480px]:text-[9px] text-[11px] uppercase tracking-[0.24em] text-muted-foreground min-[420px]:inline">
             ритуальная служба
           </span>
         </Link>
@@ -78,7 +77,6 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-          <ThemeToggle className="hidden lg:flex" />
           <Link
             href={`tel:${siteConfig.phone}`}
             className="group flex min-w-0 items-center gap-2 text-sm font-medium text-foreground transition-colors duration-300 ease-in-out"
@@ -87,16 +85,14 @@ export function SiteHeader() {
               <LuPhone className="h-4 w-4" aria-hidden="true" />
             </span>
             <div className="flex min-w-0 flex-col leading-tight">
-              <span className="truncate text-sm tabular-nums sm:text-base">
+              <span className="truncate max-[360px]:text-xs text-sm tabular-nums sm:text-base">
                 {siteConfig.phoneDisplay}
               </span>
-              <span className="truncate uppercase text-[10.5px] tracking-[0.25em] text-muted-foreground/70 transition-colors duration-300 ease-in-out group-hover:text-accent sm:text-xs">
+              <span className="truncate uppercase max-[360px]:text-[9px] text-[10px] tracking-[0.25em] text-muted-foreground/70 transition-colors duration-300 ease-in-out group-hover:text-accent sm:text-xs">
                 Круглосуточно
               </span>
             </div>
           </Link>
-
-          <ThemeToggle className="max-sm:hidden lg:hidden" />
 
           <button
             type="button"
@@ -128,7 +124,6 @@ export function SiteHeader() {
           className="mx-auto flex max-w-site flex-col px-4 py-4 sm:px-5 md:px-8 gap-2"
           aria-label="Мобильная навигация"
         >
-          <ThemeToggle className="max-sm:flex absolute right-2 top-6 hidden" />
           {navMobile.map((item) => (
             <Link
               key={item.href}

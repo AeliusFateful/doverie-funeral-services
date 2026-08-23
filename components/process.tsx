@@ -22,7 +22,10 @@ function StepCard({
           : "relative flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card/40 p-6"
       }
     >
-      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div
+        className="pointer-events-none select-none absolute inset-0"
+        aria-hidden="true"
+      >
         <Image
           src={step.image}
           alt=""
@@ -31,7 +34,7 @@ function StepCard({
           loading="lazy"
           className="object-cover opacity-15 transition-opacity duration-300 ease-in-out group-hover:opacity-25"
         />
-        <div className="absolute inset-0 bg-linear-to-t from-card/75 via-card/45 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-card/70 via-card/40 to-transparent" />
       </div>
 
       <div className="relative z-10">

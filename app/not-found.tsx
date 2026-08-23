@@ -44,11 +44,10 @@ export default function NotFound() {
 
         <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-lg lg:max-w-lg">
           <Image
-            src="./images/angel404.png"
+            src="./images/angel404.webp"
             alt=""
             fill
             sizes="(min-width: 1024px) 32vw, 90vw"
-            quality={75}
             loading="lazy"
             className="object-cover"
           />

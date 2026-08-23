@@ -20,9 +20,9 @@ export function HeroVideo() {
 
   return (
     <video
-      className="absolute inset-0 h-full w-full object-cover object-[25%_30%]"
+      className="absolute select-none inset-0 h-full w-full object-cover object-[25%_30%]"
       src="./videos/HeroVideo.mp4"
-      poster="./images/Hero-Angel.webp"
+      poster="./images/hero/Hero-Angel.webp"
       autoPlay
       loop
       muted
