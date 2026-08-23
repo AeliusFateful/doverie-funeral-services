@@ -9,7 +9,7 @@ const footerNavMid = Math.ceil(navFooter.length / 2);
 export function SiteFooter() {
   return (
     <footer className="section-surface-alt border-t border-border">
-      <div className="section-py pb-8! mx-auto max-w-site px-5 md:px-8">
+      <div className="section-py pb-24! mx-auto max-w-site px-5 md:px-8">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-sm">
             <span className="font-serif text-3xl tracking-tight font-semibold text-foreground md:text-4xl">
@@ -17,15 +17,14 @@ export function SiteFooter() {
             </span>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
               Ритуальная служба полного цикла в Кемерово. Круглосуточная помощь
-              семьям в организации достойного прощания.
+              семьям в&nbsp;организации достойного прощания.
             </p>
-            <SocialLinks className=" mt-6" />
-              <p className="mt-6 text-sm text-muted-foreground">
-                ОГРНИП - {siteConfig.ogrnip}
-              </p>
-              <p className="mt-2 text-sm text-muted-foreground">
-                ИНН - {siteConfig.inn}
-              </p>
+            <p className="mt-4 lg:mt-6 text-sm text-muted-foreground">
+              ОГРНИП - {siteConfig.ogrnip}
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              ИНН - {siteConfig.inn}
+            </p>
           </div>
 
           <div className="flex flex-col gap-10 sm:flex-row sm:gap-16 lg:gap-20">
@@ -91,13 +90,32 @@ export function SiteFooter() {
                 />
                 <span>Круглосуточно, без выходных</span>
               </span>
+              <SocialLinks className="mt-2" />
             </div>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-border pt-6 text-xs text-muted-foreground lg:flex-row lg:items-center lg:justify-between">
-          <p>© 2026 {siteConfig.legalName}.</p>
-          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-4">
+        <div className="mt-6 border-t border-border pt-6 text-center text-sm text-muted-foreground">
+          <a
+            href="https://github.com/AeliusFateful"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-foreground"
+          >
+            <span className="font-sans">Разработка сайта</span>
+            {" — "}
+            <span className="font-serif text-2xl underline underline-offset-4">
+              Aelius Fateful
+            </span>
+          </a>
+        </div>
+
+        <div className="mt-6 flex flex-col gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex max-md:flex-col gap-2 sm:text-left max-sm:text-center">
+            <p>© 2026 {siteConfig.legalName}.</p>
+            <p>Все права защищены.</p>
+          </div>
+          <div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-4 max-sm:text-center text-right">
             <Link
               href="/privacy"
               className="underline underline-offset-4 transition-colors hover:text-foreground"
@@ -110,7 +128,6 @@ export function SiteFooter() {
             >
               Согласие на обработку персональных данных
             </Link>
-            <p>Все права защищены.</p>
           </div>
         </div>
       </div>

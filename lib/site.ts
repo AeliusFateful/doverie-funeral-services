@@ -55,3 +55,11 @@ export const siteConfig = {
 export function telHref(phone: string = siteConfig.phone) {
   return `tel:${phone}`;
 }
+
+export function formatLastUpdated(date: string = siteConfig.lastUpdated) {
+  return `${new Date(date).toLocaleDateString("ru-RU", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  })}`;
+}

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { LuPhone } from "@/lib/icons";
 import { createPageMetadata } from "@/lib/seo";
-import { siteConfig, telHref } from "@/lib/site";
+import { formatLastUpdated, siteConfig, telHref } from "@/lib/site";
 
 export const metadata = createPageMetadata({
   title: "Политика конфиденциальности",
@@ -25,7 +25,7 @@ export default function PrivacyPage() {
           Политика конфиденциальности
         </h1>
         <p className="mt-4 text-sm text-muted-foreground">
-          Дата последнего обновления: 23 августа 2026 г.
+          Дата последнего обновления: {formatLastUpdated()}
         </p>
 
         <div className="mt-10 space-y-8 text-base leading-relaxed text-muted-foreground">
