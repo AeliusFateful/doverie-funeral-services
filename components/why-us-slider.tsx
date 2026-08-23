@@ -6,7 +6,9 @@ import { LuChevronLeft, LuChevronRight } from "@/lib/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards, Navigation } from "swiper/modules";
 
-import { useSwiperStyles } from "@/lib/use-swiper-styles";
+import "swiper/css";
+import "swiper/css/effect-cards";
+import "swiper/css/navigation";
 
 const slides = [
   { src: "./images/why-us/1.webp" },
@@ -22,7 +24,6 @@ const slides = [
 
 export function WhyUsSlider() {
   const [reducedMotion, setReducedMotion] = useState(false);
-  useSwiperStyles(["base", "effect-cards", "navigation"]);
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
