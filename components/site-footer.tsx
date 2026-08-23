@@ -35,7 +35,7 @@ export function SiteFooter() {
               <span className="font-serif text-xl font-semibold text-foreground md:text-2xl">
                 Разделы
               </span>
-              <div className="flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:gap-x-16">
+              <div className="flex flex-col gap-3 min-[420px]:grid min-[420px]:grid-cols-2 min-[420px]:gap-x-16 max-w-80 ">
                 <div className="flex flex-col gap-3">
                   {navFooter.slice(0, footerNavMid).map((item) => (
                     <Link
@@ -95,21 +95,6 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-6 border-t border-border pt-6 text-center text-sm text-muted-foreground">
-          <a
-            href="https://github.com/AeliusFateful"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-foreground"
-          >
-            <span className="font-sans">Разработка сайта</span>
-            {" — "}
-            <span className="font-serif text-2xl underline underline-offset-4">
-              Aelius Fateful
-            </span>
-          </a>
-        </div>
-
         <div className="mt-6 flex flex-col gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <div className="flex max-md:flex-col gap-2 sm:text-left max-sm:text-center">
             <p>© 2026 {siteConfig.legalName}.</p>
@@ -129,6 +114,21 @@ export function SiteFooter() {
               Согласие на обработку персональных данных
             </Link>
           </div>
+        </div>
+
+        <div className="mt-6 border-t border-border pt-6 text-center text-sm text-muted-foreground">
+          <a
+            href="https://github.com/AeliusFateful"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-foreground"
+          >
+            <span className="font-sans">Разработка сайта</span>
+            {" - "}
+            <span className="font-serif text-2xl underline underline-offset-4">
+              Aelius Fateful
+            </span>
+          </a>
         </div>
       </div>
     </footer>

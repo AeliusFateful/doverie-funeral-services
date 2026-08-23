@@ -27,8 +27,8 @@ export const products: ProductItem[] = [
   {
     image: "./images/products/product-gates.webp",
     title: "Калитки и заборы",
-    text: "Калитки и заборы. Калитки и заборы",
-    price: "от 1 990 ₽",
+    text: "Конструкции устойчивы к коррозии, перепадам температур и ветровым нагрузкам.",
+    price: "от 1 990 ₽ за м²",
   },
   {
     image: "./images/products/product-clothing.webp",
