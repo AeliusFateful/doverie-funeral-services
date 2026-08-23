@@ -8,6 +8,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 
 import type { ProductItem } from "@/lib/data/products";
+import { useSwiperStyles } from "@/lib/use-swiper-styles";
 
 type ProductsSliderProps = {
   products: ProductItem[];
@@ -15,6 +16,7 @@ type ProductsSliderProps = {
 
 export function ProductsSlider({ products }: ProductsSliderProps) {
   const swiperRef = useRef<SwiperType | null>(null);
+  useSwiperStyles(["base", "navigation"]);
 
   const pauseAutoplay = () => swiperRef.current?.autoplay?.stop();
   const resumeAutoplay = () => swiperRef.current?.autoplay?.start();
