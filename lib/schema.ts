@@ -17,9 +17,9 @@ function firstPrice(priceText: string) {
   return digits ? Number(digits) : undefined;
 }
 
-function funeralHomeSchema() {
+function localBusinessSchema() {
   return {
-    "@type": ["LocalBusiness", "FuneralHome"],
+    "@type": "LocalBusiness",
     "@id": businessId,
     name: siteConfig.legalName,
     alternateName: siteConfig.name,
@@ -82,14 +82,15 @@ function funeralHomeSchema() {
           },
         })),
         ...products.map((product) => ({
-          "@type": "Offer",
-          price: firstPrice(product.price),
-          priceCurrency: "RUB",
-          itemOffered: {
-            "@type": "Product",
-            name: product.title,
-            description: product.text,
-            image: absUrl(product.image),
+          "@type": "Product",
+          name: product.title,
+          description: product.text,
+          image: absUrl(product.image),
+          offers: {
+            "@type": "Offer",
+            price: firstPrice(product.price),
+            priceCurrency: "RUB",
+            availability: "https://schema.org/InStock",
           },
         })),
       ],
@@ -159,7 +160,7 @@ export function buildJsonLdGraph() {
     "@context": "https://schema.org",
     "@graph": [
       websiteSchema(),
-      funeralHomeSchema(),
+      localBusinessSchema(),
       faqSchema(),
       ownerSchema(),
     ],
