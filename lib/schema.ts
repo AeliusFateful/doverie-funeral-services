@@ -1,4 +1,5 @@
 import { faqs } from "../lib/data/faq";
+import { products } from "../lib/data/products";
 import { reviews } from "../lib/data/reviews";
 import { siteConfig } from "../lib/site";
 
@@ -7,17 +8,26 @@ const businessId = `${siteConfig.url}/#business`;
 const websiteId = `${siteConfig.url}/#website`;
 const personId = `${siteConfig.url}/#owner`;
 
+function absUrl(path: string) {
+  return `${siteConfig.url}/${path.replace(/^\.?\//, "")}`;
+}
+
+function firstPrice(priceText: string) {
+  const digits = priceText.replace(/[^\d]/g, "");
+  return digits ? Number(digits) : undefined;
+}
+
 function funeralHomeSchema() {
   return {
-    "@type": "FuneralHome",
+    "@type": ["LocalBusiness", "FuneralHome"],
     "@id": businessId,
     name: siteConfig.legalName,
     alternateName: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
     telephone: siteConfig.phone,
-    image: `./images/Hero-Angel.webp`,
-    logo: `./images/dove.svg`,
+    image: absUrl("images/hero/Hero-Angel.webp"),
+    logo: absUrl("images/dove.svg"),
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.street,
@@ -60,16 +70,29 @@ function funeralHomeSchema() {
     priceRange: "₽₽",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: `Ритуальные услуги в ${city}`,
-      itemListElement: siteConfig.services.map((name) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name,
-          areaServed: city,
-          provider: { "@id": businessId },
-        },
-      })),
+      name: `Ритуальные услуги и товары в ${city}`,
+      itemListElement: [
+        ...siteConfig.services.map((name) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name,
+            areaServed: city,
+            provider: { "@id": businessId },
+          },
+        })),
+        ...products.map((product) => ({
+          "@type": "Offer",
+          price: firstPrice(product.price),
+          priceCurrency: "RUB",
+          itemOffered: {
+            "@type": "Product",
+            name: product.title,
+            description: product.text,
+            image: absUrl(product.image),
+          },
+        })),
+      ],
     },
     employee: { "@id": personId },
     review: reviews.map((review) => ({
@@ -120,7 +143,7 @@ function ownerSchema() {
     "@id": personId,
     name: siteConfig.owner.name,
     jobTitle: siteConfig.owner.jobTitle,
-    image: `${siteConfig.url}${siteConfig.owner.image}`,
+    image: absUrl(siteConfig.owner.image),
     worksFor: { "@id": businessId },
     knowsAbout: [
       "Организация похорон",
