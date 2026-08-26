@@ -10,24 +10,9 @@ const CookieBanner = dynamic(() =>
 );
 
 const cormorant = localFont({
-  src: [
-    {
-      path: "../public/Cormorant Garamond/CormorantGaramond-Light.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../public/Cormorant Garamond/CormorantGaramond-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../public/Cormorant Garamond/CormorantGaramond-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
+  src: "../public/fonts/Cormorant_Garamond/CormorantGaramond-VariableFont_wght.woff2",
   variable: "--font-cormorant",
+  weight: "300 700",
   display: "optional",
   adjustFontFallback: "Times New Roman",
   preload: true,
@@ -35,7 +20,7 @@ const cormorant = localFont({
 });
 
 const manrope = localFont({
-  src: "../public/Manrope/Manrope-VariableFont_wght.woff2",
+  src: "../public/fonts/Manrope/Manrope-VariableFont_wght.woff2",
   variable: "--font-manrope",
   display: "swap",
   weight: "200 800",
