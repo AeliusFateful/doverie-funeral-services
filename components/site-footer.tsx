@@ -1,6 +1,6 @@
 import { LuClock, LuMapPin } from "@/lib/icons";
 import { navFooter } from "@/lib/nav";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, telHref } from "@/lib/site";
 import { SocialLinks } from "@/components/social-links";
 import Link from "next/link";
 
@@ -66,7 +66,7 @@ export function SiteFooter() {
                 Контакты
               </span>
               <Link
-                href={`tel:${siteConfig.phone}`}
+                href={telHref()}
                 className="text-lg text-foreground transition-colors hover:text-accent"
               >
                 {siteConfig.phoneDisplay}

@@ -1,7 +1,9 @@
-import { siteConfig } from "../lib/site";
+import type { MetadataRoute } from "next";
+import { siteConfig } from "@/lib/site";
+
 export const dynamic = "force-static";
 
-export default function manifest() {
+export default function manifest(): MetadataRoute.Manifest {
   return {
     name: siteConfig.legalName,
     short_name: siteConfig.name,
@@ -13,7 +15,7 @@ export default function manifest() {
     lang: "ru",
     icons: [
       {
-        src: "../icon.svg",
+        src: "./images/dove.svg",
         sizes: "any",
         type: "image/svg+xml",
       },

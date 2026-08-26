@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { HiStar, LuMapPin, LuPhone } from "@/lib/icons";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, telHref } from "@/lib/site";
 import { SocialLinks } from "@/components/social-links";
 import { HeroVideo } from "./hero-video";
 
@@ -59,7 +59,7 @@ export function Hero() {
           </div>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
-              href={`tel:${siteConfig.phone}`}
+              href={telHref()}
               className="btn-accent gap-2 px-6 py-3.5 text-base"
             >
               <LuPhone className="h-4 w-4" aria-hidden="true" />
@@ -80,8 +80,7 @@ export function Hero() {
             alt=""
             width={351}
             height={213}
-            loading="lazy"
-            className="pointer-events-none select-none absolute inset-0 -top-16 left-134 -z-2 opacity-45 w-82 -rotate-15"
+            className="pointer-events-none select-none absolute inset-0 -top-16 left-132 -z-2 opacity-45 w-82 -rotate-15"
           />
           <blockquote className="font-serif font-bold text-xl leading-snug text-foreground md:text-2xl">
             «Мы не можем вернуть тех, кого&nbsp;потеряли, но&nbsp;можем

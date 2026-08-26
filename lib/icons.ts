@@ -1,33 +1,4 @@
-import type { IconType } from "react-icons";
-import {
-  LuChurch,
-  LuClock,
-  LuCross,
-  LuFileText,
-  LuFlame,
-  LuFlower2,
-  LuHeartHandshake,
-  LuMapPin,
-  LuMenu,
-  LuPhone,
-  LuPlus,
-  LuQuote,
-  LuRoute,
-  LuScale,
-  LuShieldCheck,
-  LuStar,
-  LuTruck,
-  LuX,
-  LuChevronLeft,
-  LuChevronRight,
-  LuClipboardList,
-  LuUserRound,
-  LuAward,
-  LuHandshake,
-  LuMapPinned,
-} from "react-icons/lu";
-import { HiStar } from "react-icons/hi2";
-
+export type { IconType } from "react-icons";
 export {
   LuChurch,
   LuClock,
@@ -54,7 +25,5 @@ export {
   LuAward,
   LuHandshake,
   LuMapPinned,
-  HiStar,
-};
-
-export type { IconType };
+} from "react-icons/lu";
+export { HiStar } from "react-icons/hi2";

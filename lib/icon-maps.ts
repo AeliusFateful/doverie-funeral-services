@@ -17,7 +17,7 @@ import {
   LuTruck,
   LuUserRound,
 } from "../lib/icons";
-import type { AboutValue } from "../lib/data/about";
+import type { OwnerValue } from "../lib/data/owner";
 import type { ProcessStep } from "../lib/data/process";
 import type { ServiceItem } from "../lib/data/services";
 import type { WhyUsReason } from "../lib/data/why-us";
@@ -47,7 +47,7 @@ const whyUsIconMap: Record<WhyUsReason["icon"], IconType> = {
   route: LuRoute,
 };
 
-const aboutIconMap: Record<AboutValue["icon"], IconType> = {
+const ownerIconMap: Record<OwnerValue["icon"], IconType> = {
   handshake: LuHandshake,
   map: LuMapPinned,
   award: LuAward,
@@ -65,6 +65,6 @@ export function getWhyUsIcon(icon: WhyUsReason["icon"]) {
   return whyUsIconMap[icon];
 }
 
-export function getAboutIcon(icon: AboutValue["icon"]) {
-  return aboutIconMap[icon];
+export function getOwnerIcon(icon: OwnerValue["icon"]) {
+  return ownerIconMap[icon];
 }

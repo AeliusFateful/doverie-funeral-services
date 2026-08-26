@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { aboutValues } from "@/lib/data/about";
-import { getAboutIcon } from "@/lib/icon-maps";
+import { ownerValues } from "@/lib/data/owner";
+import { getOwnerIcon } from "@/lib/icon-maps";
 import { siteConfig } from "@/lib/site";
 
 export function Owner() {
@@ -40,8 +40,8 @@ export function Owner() {
             </div>
 
             <div className="mt-10 flex flex-col divide-y divide-border border-y border-border">
-              {aboutValues.map((value) => {
-                const Icon = getAboutIcon(value.icon);
+              {ownerValues.map((value) => {
+                const Icon = getOwnerIcon(value.icon);
                 return (
                   <div
                     key={value.title}

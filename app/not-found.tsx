@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { LuPhone } from "../lib/icons";
-import { createPageMetadata } from "../lib/seo";
-import { siteConfig, telHref } from "../lib/site";
+import { LuPhone } from "@/lib/icons";
+import { createPageMetadata } from "@/lib/seo";
+import { siteConfig, telHref } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Страница не найдена",

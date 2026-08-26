@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import dynamic from "next/dynamic";
-import { JsonLd } from "../components/json-ld";
-import { rootMetadata } from "../lib/seo";
+import { JsonLd } from "@/components/json-ld";
+import { rootMetadata } from "@/lib/seo";
 import "./globals.css";
 
 const CookieBanner = dynamic(() =>
-  import("../components/cookie-banner").then((m) => m.CookieBanner),
+  import("@/components/cookie-banner").then((m) => m.CookieBanner),
 );
 
 const cormorant = localFont({
@@ -51,6 +51,7 @@ export default function RootLayout({
       lang="ru"
       data-scroll-behavior="smooth"
       className={`${cormorant.variable} ${manrope.variable}`}
+      suppressHydrationWarning
     >
       <head>
         <link
@@ -61,7 +62,10 @@ export default function RootLayout({
           media="(min-width: 1024px)"
         />
       </head>
-      <body className="antialiased bg-background font-sans">
+      <body
+        className="antialiased bg-background font-sans"
+        suppressHydrationWarning
+      >
         <JsonLd />
         {children}
         <CookieBanner />

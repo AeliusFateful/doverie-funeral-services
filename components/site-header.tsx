@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { LuMenu, LuPhone, LuX } from "@/lib/icons";
 import { navDesktop, navMobile } from "@/lib/nav";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, telHref } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
@@ -78,7 +78,7 @@ export function SiteHeader() {
 
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <Link
-            href={`tel:${siteConfig.phone}`}
+            href={telHref()}
             className="group flex min-w-0 items-center gap-2 text-sm font-medium text-foreground transition-colors duration-300 ease-in-out"
           >
             <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/40 text-accent transition-colors duration-300 ease-in-out group-hover:bg-accent group-hover:text-accent-foreground">
