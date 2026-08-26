@@ -26,7 +26,7 @@ function localBusinessSchema() {
     description: siteConfig.description,
     url: siteConfig.url,
     telephone: siteConfig.phone,
-    image: absUrl("images/hero/Hero-Angel.webp"),
+    image: absUrl("images/owner/owner.webp"),
     logo: absUrl("images/dove.svg"),
     address: {
       "@type": "PostalAddress",
@@ -149,7 +149,9 @@ function ownerSchema() {
     knowsAbout: [
       "Организация похорон",
       "Ритуальные услуги",
-      "Оформление документов",
+      "Похоронное бюро",
+      "Ритуальные служба",
+      "Похоронная служба",
       "Кремация",
     ],
   };

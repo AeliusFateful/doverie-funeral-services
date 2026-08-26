@@ -96,7 +96,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-6 flex flex-col gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex max-md:flex-col gap-2 sm:text-left max-sm:text-center">
+          <div className="flex max-md:flex-col gap-1 sm:text-left max-sm:text-center">
             <p>© 2026 {siteConfig.legalName}.</p>
             <p>Все права защищены.</p>
           </div>

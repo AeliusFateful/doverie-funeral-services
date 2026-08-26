@@ -11,15 +11,18 @@ import "swiper/css/effect-cards";
 import "swiper/css/navigation";
 
 const slides = [
-  { src: "./images/why-us/1.webp" },
-  { src: "./images/why-us/2.webp" },
-  { src: "./images/why-us/3.webp" },
-  { src: "./images/products/product-coffin.webp" },
-  { src: "./images/why-us/5.webp" },
-  { src: "./images/why-us/6.webp" },
-  { src: "./images/why-us/7.webp" },
-  { src: "./images/why-us/8.webp" },
-  { src: "./images/why-us/9.webp" },
+  { src: "./images/why-us/1.webp", alt: "Вход в похоронную службу «Доверие»" },
+  { src: "./images/why-us/2.webp", alt: "Венки" },
+  { src: "./images/why-us/3.webp", alt: "Корзинка цветов" },
+  { src: "./images/products/product-coffin.webp", alt: "Гробы" },
+  { src: "./images/why-us/5.webp", alt: "Гробы обитые красной тканью" },
+  { src: "./images/why-us/6.webp", alt: "Кресты" },
+  { src: "./images/why-us/7.webp", alt: "Похоронная одежда для женщин" },
+  { src: "./images/why-us/8.webp", alt: "Похоронная одежда для мужчин" },
+  {
+    src: "./images/why-us/9.webp",
+    alt: "Табличка с фото солдата, ФИО и даты жизни",
+  },
 ] as const;
 
 export function WhyUsSlider() {
@@ -55,7 +58,7 @@ export function WhyUsSlider() {
           <SwiperSlide key={slide.src}>
             <Image
               src={slide.src}
-              alt=""
+              alt={slide.alt}
               width={500}
               height={650}
               loading="lazy"

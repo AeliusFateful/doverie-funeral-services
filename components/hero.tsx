@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { HiStar, LuMapPin, LuPhone } from "@/lib/icons";
 import { siteConfig } from "@/lib/site";
 import { SocialLinks } from "@/components/social-links";
@@ -74,10 +75,13 @@ export function Hero() {
           <SocialLinks className="mt-8 flex max-[480px]:justify-center" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl text-center hidden lg:block mt-auto">
-          <img
+          <Image
             src="./images/background/gvozdika.webp"
             alt=""
-            className="pointer-events-none select-none absolute inset-0 -top-16 left-134 -z-2 opacity-40 w-82 -rotate-15"
+            width={351}
+            height={213}
+            loading="lazy"
+            className="pointer-events-none select-none absolute inset-0 -top-16 left-134 -z-2 opacity-45 w-82 -rotate-15"
           />
           <blockquote className="font-serif font-bold text-xl leading-snug text-foreground md:text-2xl">
             «Мы не можем вернуть тех, кого&nbsp;потеряли, но&nbsp;можем

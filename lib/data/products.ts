@@ -43,7 +43,7 @@ export const products: ProductItem[] = [
     price: "от 9 990 ₽",
   },
   {
-    image: "./images/products/product-urn.jpg",
+    image: "./images/products/product-urn.webp",
     title: "Урны и принадлежности",
     text: "Урны для праха, таблички, покрывала и сопутствующие товары.",
     price: "от 990 ₽",

@@ -146,11 +146,10 @@ export default function ConsentPage() {
               телефону{" "}
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="text-foreground underline underline-offset-4 hover:text-accent"
+                className="text-foreground underline underline-offset-4 hover:text-accent whitespace-nowrap"
               >
                 {siteConfig.phoneDisplay}
               </a>
-              .
             </p>
           </section>
 
@@ -183,7 +182,7 @@ export default function ConsentPage() {
               Телефон:{" "}
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="text-foreground underline underline-offset-4 hover:text-accent"
+                className="text-foreground underline underline-offset-4 hover:text-accent whitespace-nowrap"
               >
                 {siteConfig.phoneDisplay}
               </a>

@@ -1,7 +1,73 @@
-Cormorant is a free display type family developed by Christian Thalmann. The project currently comprises a total of 45 font files spanning 9 different visual styles (Roman, Italic, Infant, Infant Italic, Garamond, Garamond Italic, Upright Cursive, Small Caps, and Unicase) and 5 weights (Light, Regular, Medium, SemiBold, and Bold.) Cormorant was conceived, drawn, spaced, kerned, programmed, interpolated, and produced in its entirety by Christian Thalmann of Catharsis Fonts. For an illustrated presentation and description of the family, please visit its [Bēhance page](https://www.behance.net/gallery/28579883/Cormorant-an-open-source-display-font-family).
+Cormorant Garamond Variable Font
+================================
 
-While this project was heavily inspired by Claude Garamont's immortal legacy, Christian did not use any specific font as a starting point or direct reference for the designs. Most glyphs were drawn from scratch; when he needed guidance on a specific character, he searched for the term Garamond and skimmed through the results for a general impression.
+This download contains Cormorant Garamond as both variable fonts and static fonts.
 
-He is grateful to the creative souls on the Typophile, TypeDrawers and Typografie forums, and Github, for a wealth of knowledge about type design, and for providing a large amount of excellent feedback on Cormorant during its development. He also thanks the tireless folks at Glyphs, in particular Rainer Erich Scheichelbauer of Schriftlabor and Georg Seifert. Special thanks go to Dave Crossland and Google Fonts for making the libre release of this font family possible through generous funding of the development process.
+Cormorant Garamond is a variable font with this axis:
+  wght
 
-The Cormorant project is led by Christian Thalmann, a type designer based in Zurich, Switzerland. To contribute, see [github.com/CatharsisFonts/Cormorant](http://www.github.com/CatharsisFonts/Cormorant)
+This means all the styles are contained in these files:
+  CormorantGaramond-VariableFont_wght.ttf
+  CormorantGaramond-Italic-VariableFont_wght.ttf
+
+If your app fully supports variable fonts, you can now pick intermediate styles
+that aren’t available as static fonts. Not all apps support variable fonts, and
+in those cases you can use the static font files for Cormorant Garamond:
+  static/CormorantGaramond-Light.ttf
+  static/CormorantGaramond-Regular.ttf
+  static/CormorantGaramond-Medium.ttf
+  static/CormorantGaramond-SemiBold.ttf
+  static/CormorantGaramond-Bold.ttf
+  static/CormorantGaramond-LightItalic.ttf
+  static/CormorantGaramond-Italic.ttf
+  static/CormorantGaramond-MediumItalic.ttf
+  static/CormorantGaramond-SemiBoldItalic.ttf
+  static/CormorantGaramond-BoldItalic.ttf
+
+Get started
+-----------
+
+1. Install the font files you want to use
+
+2. Use your app's font picker to view the font family and all the
+available styles
+
+Learn more about variable fonts
+-------------------------------
+
+  https://developers.google.com/web/fundamentals/design-and-ux/typography/variable-fonts
+  https://variablefonts.typenetwork.com
+  https://medium.com/variable-fonts
+
+In desktop apps
+
+  https://theblog.adobe.com/can-variable-fonts-illustrator-cc
+  https://helpx.adobe.com/nz/photoshop/using/fonts.html#variable_fonts
+
+Online
+
+  https://developers.google.com/fonts/docs/getting_started
+  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide
+  https://developer.microsoft.com/en-us/microsoft-edge/testdrive/demos/variable-fonts
+
+Installing fonts
+
+  MacOS: https://support.apple.com/en-us/HT201749
+  Linux: https://www.google.com/search?q=how+to+install+a+font+on+gnu%2Blinux
+  Windows: https://support.microsoft.com/en-us/help/314960/how-to-install-or-remove-a-font-in-windows
+
+Android Apps
+
+  https://developers.google.com/fonts/docs/android
+  https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts
+
+License
+-------
+Please read the full license text (OFL.txt) to understand the permissions,
+restrictions and requirements for usage, redistribution, and modification.
+
+You can use them in your products & projects – print or digital,
+commercial or otherwise.
+
+This isn't legal advice, please consider consulting a lawyer and see the full
+license for all details.

@@ -148,7 +148,7 @@ export default function PrivacyPage() {
               Для реализации прав направьте запрос по телефону{" "}
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="text-foreground underline underline-offset-4 hover:text-accent"
+                className="text-foreground underline underline-offset-4 hover:text-accent whitespace-nowrap"
               >
                 {siteConfig.phoneDisplay}
               </a>{" "}
@@ -204,7 +204,7 @@ export default function PrivacyPage() {
               Телефон:{" "}
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="text-foreground underline underline-offset-4 hover:text-accent"
+                className="text-foreground underline underline-offset-4 hover:text-accent whitespace-nowrap"
               >
                 {siteConfig.phoneDisplay}
               </a>

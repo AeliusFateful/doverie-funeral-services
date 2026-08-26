@@ -1,9 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import { CookieBanner } from "../components/cookie-banner";
+import dynamic from "next/dynamic";
 import { JsonLd } from "../components/json-ld";
 import { rootMetadata } from "../lib/seo";
 import "./globals.css";
+
+const CookieBanner = dynamic(() =>
+  import("../components/cookie-banner").then((m) => m.CookieBanner),
+);
 
 const cormorant = localFont({
   src: [
@@ -69,6 +73,7 @@ export default function RootLayout({
           as="image"
           href="./images/hero/Hero-Angel.webp"
           fetchPriority="high"
+          media="(min-width: 1024px)"
         />
       </head>
       <body className="antialiased bg-background font-sans">
