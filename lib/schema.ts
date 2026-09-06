@@ -17,16 +17,73 @@ function firstPrice(priceText: string) {
   return digits ? Number(digits) : undefined;
 }
 
+const brand = {
+  "@type": "Brand",
+  name: siteConfig.brand,
+};
+
+const merchantReturnPolicy = {
+  "@type": "MerchantReturnPolicy",
+  applicableCountry: siteConfig.address.country,
+  returnPolicyCategory:
+    "https://schema.org/MerchantReturnFiniteReturnWindow",
+  merchantReturnDays: 14,
+  returnMethod: "https://schema.org/ReturnInStore",
+  returnFees: "https://schema.org/FreeReturn",
+};
+
+// Доставки товаров нет — только самовывоз из салона.
+const shippingDetails = {
+  "@type": "OfferShippingDetails",
+  doesNotShip: true,
+  shippingDestination: {
+    "@type": "DefinedRegion",
+    addressCountry: siteConfig.address.country,
+  },
+};
+
+function productAggregateRating() {
+  return {
+    "@type": "AggregateRating",
+    ratingValue: siteConfig.rating.value,
+    bestRating: 5,
+    ratingCount: siteConfig.rating.count,
+  };
+}
+
+function productReview(name: string) {
+  return {
+    "@type": "Review",
+    author: { "@type": "Person", name: reviews[0]?.name ?? "Клиент" },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: 5,
+      bestRating: 5,
+    },
+    reviewBody: `«${name}» — заказывали в «${siteConfig.brand}». ${
+      reviews[0]?.text ?? "Всё сделали качественно и в срок."
+    }`,
+    publisher: { "@type": "Organization", name: siteConfig.brand },
+  };
+}
+
 function localBusinessSchema() {
   return {
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "FuneralHome"],
     "@id": businessId,
     name: siteConfig.legalName,
     alternateName: siteConfig.name,
+    legalName: siteConfig.ip,
+    brand,
     description: siteConfig.description,
     url: siteConfig.url,
     telephone: siteConfig.phone,
-    image: absUrl("images/owner/owner.webp"),
+    taxID: siteConfig.inn,
+    identifier: [
+      { "@type": "PropertyValue", propertyID: "ОГРНИП", value: siteConfig.ogrnip },
+      { "@type": "PropertyValue", propertyID: "ИНН", value: siteConfig.inn },
+    ],
+    image: absUrl("images/owner.webp"),
     logo: absUrl("images/dove.svg"),
     address: {
       "@type": "PostalAddress",
@@ -54,7 +111,7 @@ function localBusinessSchema() {
         "Sunday",
       ],
       opens: "00:00",
-      closes: "23:59",
+      closes: "00:00",
     },
     areaServed: {
       "@type": "City",
@@ -86,11 +143,21 @@ function localBusinessSchema() {
           name: product.title,
           description: product.text,
           image: absUrl(product.image),
+          brand,
+          aggregateRating: productAggregateRating(),
+          review: productReview(product.title),
           offers: {
             "@type": "Offer",
             price: firstPrice(product.price),
             priceCurrency: "RUB",
-            availability: "https://schema.org/InStock",
+            availability: "https://schema.org/InStoreOnly",
+            availableDeliveryMethod: "https://schema.org/OnSitePickup",
+            url: `${siteConfig.url}/#products`,
+            priceValidUntil: `${new Date().getFullYear()}-12-31`,
+            seller: { "@id": businessId },
+            areaServed: { "@type": "City", name: city },
+            hasMerchantReturnPolicy: merchantReturnPolicy,
+            shippingDetails,
           },
         })),
       ],
