@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import { LuChevronLeft, LuChevronRight } from "@/lib/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay, Keyboard, Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 
 import type { ProductItem } from "@/lib/data/products";
@@ -29,7 +29,7 @@ export function ProductsSlider({ products }: ProductsSliderProps) {
       onMouseLeave={resumeAutoplay}
     >
       <Swiper
-        modules={[Navigation, Autoplay]}
+        modules={[Navigation, Autoplay, Keyboard]}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -40,7 +40,7 @@ export function ProductsSlider({ products }: ProductsSliderProps) {
         loop
         loopAddBlankSlides={false}
         watchOverflow
-        speed={600}
+        speed={500}
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
@@ -53,6 +53,7 @@ export function ProductsSlider({ products }: ProductsSliderProps) {
           640: { slidesPerView: 2, slidesPerGroup: 1 },
           1024: { slidesPerView: 4, slidesPerGroup: 1 },
         }}
+        keyboard={{ enabled: true }}
         navigation={{
           prevEl: ".products-slider-prev",
           nextEl: ".products-slider-next",
@@ -61,7 +62,7 @@ export function ProductsSlider({ products }: ProductsSliderProps) {
       >
         {products.map((product) => (
           <SwiperSlide key={product.title} className="h-auto!">
-            <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card/40 transition-colors duration-300 ease-in-out hover:border-accent/40">
+            <article className="w-full group flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card/40 transition-colors duration-300 ease-in-out hover:border-accent/40">
               <div className="relative aspect-4/5 shrink-0 overflow-hidden bg-muted/30">
                 <Image
                   src={product.image}
@@ -69,7 +70,7 @@ export function ProductsSlider({ products }: ProductsSliderProps) {
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   loading="lazy"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  className="select-none object-cover transition-transform duration-700 ease-out group-hover:scale-105 will-change-transform"
                 />
               </div>
               <div className="flex min-h-44 flex-1 flex-col p-6">
@@ -91,14 +92,14 @@ export function ProductsSlider({ products }: ProductsSliderProps) {
       <button
         type="button"
         aria-label="Предыдущий товар"
-        className="products-slider-prev absolute inset-y-0 -left-3 z-10 flex w-10 items-center justify-center rounded-none border border-border/80 border-y-0 bg-background/90 text-foreground backdrop-blur-sm transition-colors duration-300 ease-in-out hover:border-accent/40 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 disabled:pointer-events-none disabled:opacity-40 sm:-left-4 sm:w-11"
+        className="products-slider-prev absolute inset-y-0 -left-3 z-10 flex w-10 items-center rounded-lg justify-center border border-border/80 bg-background/90 text-foreground backdrop-blur-sm transition-colors duration-300 ease-in-out hover:border-accent/40 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 disabled:pointer-events-none disabled:opacity-40 sm:-left-4 sm:w-11"
       >
         <LuChevronLeft className="h-5 w-5" strokeWidth={2.5} />
       </button>
       <button
         type="button"
         aria-label="Следующий товар"
-        className="products-slider-next absolute inset-y-0 -right-3 z-10 flex w-10 items-center justify-center rounded-none border border-border/80 border-y-0 bg-background/90 text-foreground backdrop-blur-sm transition-colors duration-300 ease-in-out hover:border-accent/40 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 disabled:pointer-events-none disabled:opacity-40 sm:-right-4 sm:w-11"
+        className="products-slider-next absolute inset-y-0 -right-3 z-10 flex w-10 items-center rounded-lg justify-center border border-border/80 bg-background/90 text-foreground backdrop-blur-sm transition-colors duration-300 ease-in-out hover:border-accent/40 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 disabled:pointer-events-none disabled:opacity-40 sm:-right-4 sm:w-11"
       >
         <LuChevronRight className="h-5 w-5" strokeWidth={2.5} />
       </button>

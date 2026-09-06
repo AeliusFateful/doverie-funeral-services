@@ -72,7 +72,7 @@ export function Owner() {
                 fill
                 sizes="(min-width: 1024px) 22rem, 90vw"
                 loading="lazy"
-                className="object-cover object-top"
+                className="select-none object-cover object-top"
               />
             </div>
           </div>
