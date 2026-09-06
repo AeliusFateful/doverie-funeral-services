@@ -1,0 +1,12 @@
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# Force HTTPS (works behind proxies that set X-Forwarded-Proto too)
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Force canonical host without www
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]

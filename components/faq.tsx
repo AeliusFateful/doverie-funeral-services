@@ -13,9 +13,9 @@ export function Faq() {
       id="faq"
       className="section-surface-alt px-5 py-12 md:px-8 md:py-16 relative z-1"
     >
-      <div className=" max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <img
-          src="./images/background/white-lilies.webp"
+          src="./images/bg-white-lilies.webp"
           alt=""
           className="pointer-events-none select-none absolute right-0 top-60 w-200 -z-1 opacity-10"
         />

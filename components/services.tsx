@@ -7,7 +7,7 @@ export function Services() {
     <section id="services" className="section-surface">
       <div className="relative section-py mx-auto max-w-site px-5 md:px-8 z-1">
         <img
-          src="./images/background/doves.webp"
+          src="./images/bg-doves.webp"
           alt=""
           className="pointer-events-none select-none absolute opacity-30 top-0 -left-52 w-150 -z-1"
         />

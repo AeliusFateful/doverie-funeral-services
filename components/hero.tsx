@@ -25,7 +25,7 @@ export function Hero() {
           <div className="relative z-2">
             <p className="section-label mb-6 flex items-center gap-3 text-accent">
               <span className="h-px w-8 bg-accent/60" />
-              Круглосуточно. без&nbsp;выходных
+              Круглосуточно. Без&nbsp;выходных
             </p>
             <h1 className="font-serif text-4xl font-medium leading-[1.08] tracking-tight text-foreground md:text-6xl">
               Ритуальные услуги в&nbsp;Кемерово
@@ -76,13 +76,13 @@ export function Hero() {
         </div>
         <div className="relative z-10 mx-auto max-w-4xl text-center hidden lg:block mt-auto">
           <Image
-            src="./images/background/gvozdika.webp"
+            src="./images/bg-gvozdika.webp"
             alt=""
             width={351}
             height={213}
             className="pointer-events-none select-none absolute inset-0 -top-16 left-132 -z-2 opacity-45 w-82 -rotate-15"
           />
-          <blockquote className="font-serif font-bold text-xl leading-snug text-foreground md:text-2xl">
+          <blockquote className="font-serif text-xl leading-snug text-foreground md:text-2xl">
             «Мы не можем вернуть тех, кого&nbsp;потеряли, но&nbsp;можем
             провести&nbsp;их&nbsp;в&nbsp;последний&nbsp;путь
             с&nbsp;тем&nbsp;достоинством, которого&nbsp;они&nbsp;заслуживают.»

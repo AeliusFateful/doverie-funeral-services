@@ -22,7 +22,7 @@ export function HeroVideo() {
     <video
       className="absolute select-none inset-0 h-full w-full object-cover object-[25%_30%]"
       src="./videos/HeroVideo.mp4"
-      poster="./images/hero/Hero-Angel.webp"
+      poster="./images/hero-angel.webp"
       autoPlay
       loop
       muted

@@ -48,7 +48,7 @@ export function Reviews() {
               ))}
             </div>
             <img
-              src="./images/background/hero-candle.webp"
+              src="./images/bg-hero-candle.webp"
               alt=""
               className="pointer-events-none absolute -z-1 opacity-25 max-lg:aspect-square max-lg:object-cover max-lg:bg-bottom max-lg:right-0 max-lg:-top-38 lg:-bottom-16 hidden sm:block w-80 lg:w-110 select-none"
             />

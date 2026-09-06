@@ -1,48 +1,37 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import { LuChevronLeft, LuChevronRight } from "@/lib/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards, Navigation } from "swiper/modules";
+import { EffectCards, Keyboard, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/navigation";
 
 const slides = [
-  { src: "./images/why-us/1.webp", alt: "Вход в похоронную службу «Доверие»" },
-  { src: "./images/why-us/2.webp", alt: "Венки" },
-  { src: "./images/why-us/3.webp", alt: "Корзинка цветов" },
-  { src: "./images/products/product-coffin.webp", alt: "Гробы" },
-  { src: "./images/why-us/5.webp", alt: "Гробы обитые красной тканью" },
-  { src: "./images/why-us/6.webp", alt: "Кресты" },
-  { src: "./images/why-us/7.webp", alt: "Похоронная одежда для женщин" },
-  { src: "./images/why-us/8.webp", alt: "Похоронная одежда для мужчин" },
+  { src: "./images/why-us-1.webp", alt: "Вход в похоронную службу «Доверие»" },
+  { src: "./images/why-us-2.webp", alt: "Венки" },
+  { src: "./images/why-us-3.webp", alt: "Корзинка цветов" },
+  { src: "./images/product-coffin.webp", alt: "Гробы" },
+  { src: "./images/why-us-5.webp", alt: "Гробы обитые красной тканью" },
+  { src: "./images/why-us-6.webp", alt: "Кресты" },
+  { src: "./images/clothing.webp", alt: "Похоронная одежда" },
   {
-    src: "./images/why-us/9.webp",
-    alt: "Табличка с фото солдата, ФИО и даты жизни",
+    src: "./images/plaques.webp",
+    alt: "Таблички с фото, ФИО и даты жизни",
   },
 ] as const;
 
 export function WhyUsSlider() {
-  const [reducedMotion, setReducedMotion] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReducedMotion(mq.matches);
-    const onChange = () => setReducedMotion(mq.matches);
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, []);
-
   return (
     <div className="why-us-slider relative h-full min-h-80 w-full lg:min-h-0">
       <Swiper
-        modules={[EffectCards, Navigation]}
+        modules={[EffectCards, Navigation, Keyboard]}
         effect="cards"
         grabCursor
-        cardsEffect={{ perSlideRotate: 5, slideShadows: false }}
+        cardsEffect={{ perSlideRotate: 4, slideShadows: false }}
+        keyboard={{ enabled: true }}
         navigation={{
           prevEl: ".why-us-slider-prev",
           nextEl: ".why-us-slider-next",
@@ -54,15 +43,17 @@ export function WhyUsSlider() {
         }}
         className="h-full w-full overflow-hidden rounded-2xl"
       >
-        {slides.map((slide, i) => (
-          <SwiperSlide key={slide.src}>
+        {slides.map((slide) => (
+          <SwiperSlide
+            key={slide.src}
+          >
             <Image
               src={slide.src}
               alt={slide.alt}
               width={500}
               height={650}
               loading="lazy"
-              className="aspect-3/4 w-[70%] rounded-lg sm:rounded-2xl object-cover lg:w-full"
+              className="select-none aspect-3/4 w-[70%] rounded-lg sm:rounded-2xl object-cover lg:w-full will-change-transform"
               sizes="(min-width: 1024px) 28vw, 70vw"
             />
           </SwiperSlide>
