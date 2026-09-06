@@ -104,17 +104,16 @@ export function SiteFooter() {
         <div className="mt-6 flex flex-col gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <div className="flex max-md:flex-col gap-1 sm:text-left max-sm:text-center">
             <p>© 2026 {siteConfig.legalName}.</p>
+            <p>Все права защищены.</p>
           </div>
           <div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-4 max-sm:text-center text-right">
-            <p>Все права защищены.</p>
-
-            {/* <Link
+            <Link
               href="/privacy"
               className="underline underline-offset-4 transition-colors hover:text-foreground"
             >
               Политика конфиденциальности
             </Link>
-            <Link
+            {/* <Link
               href="/consent"
               className="underline underline-offset-4 transition-colors hover:text-foreground"
             >

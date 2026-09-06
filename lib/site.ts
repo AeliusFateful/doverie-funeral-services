@@ -11,6 +11,7 @@ export const siteConfig = {
   url: "https://doverie-ritual-kemerovo.ru",
   phone: "+79001068023",
   phoneDisplay: "+7 900 106-80-23",
+  email: "gusmanovanatali@mail.ru",
   address: {
     street: "ул. Металлистов, 1а/3",
     city: "Кемерово",
@@ -41,7 +42,7 @@ export const siteConfig = {
   openingHours: "Mo-Su 00:00-24:00",
   agentArrivalMinutes: "15–30",
   foundedYear: 2024,
-  lastUpdated: "2026-09-01",
+  lastUpdated: "2026-09-07",
   services: [
     "Организация похорон",
     "Вызов ритуального агента",
