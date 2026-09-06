@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 // import dynamic from "next/dynamic";
 import { JsonLd } from "@/components/json-ld";
 import { rootMetadata } from "@/lib/seo";
+import { asset } from "@/lib/utils";
 import "./globals.css";
 
 // const CookieBanner = dynamic(() =>
@@ -31,8 +32,8 @@ const manrope = localFont({
 export const metadata: Metadata = {
   ...rootMetadata,
   icons: {
-    icon: [{ url: "./images/dove.svg", type: "image/svg+xml" }],
-    apple: "./images/dove.svg",
+    icon: [{ url: asset("images/dove.svg"), type: "image/svg+xml" }],
+    apple: asset("images/dove.svg"),
   },
 };
 
@@ -57,7 +58,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="./images/hero-angel.webp"
+          href={asset("images/hero-angel.webp")}
           fetchPriority="high"
           media="(min-width: 1024px)"
         />

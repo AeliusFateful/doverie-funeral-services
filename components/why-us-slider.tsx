@@ -4,21 +4,22 @@ import Image from "next/image";
 import { LuChevronLeft, LuChevronRight } from "@/lib/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards, Keyboard, Navigation } from "swiper/modules";
+import { asset } from "@/lib/utils";
 
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/navigation";
 
 const slides = [
-  { src: "./images/why-us-1.webp", alt: "Вход в похоронную службу «Доверие»" },
-  { src: "./images/why-us-2.webp", alt: "Венки" },
-  { src: "./images/why-us-3.webp", alt: "Корзинка цветов" },
-  { src: "./images/product-coffin.webp", alt: "Гробы" },
-  { src: "./images/why-us-5.webp", alt: "Гробы обитые красной тканью" },
-  { src: "./images/why-us-6.webp", alt: "Кресты" },
-  { src: "./images/clothing.webp", alt: "Похоронная одежда" },
+  { src: asset("images/why-us-1.webp"), alt: "Вход в похоронную службу «Доверие»" },
+  { src: asset("images/why-us-2.webp"), alt: "Венки" },
+  { src: asset("images/why-us-3.webp"), alt: "Корзинка цветов" },
+  { src: asset("images/product-coffin.webp"), alt: "Гробы" },
+  { src: asset("images/why-us-5.webp"), alt: "Гробы обитые красной тканью" },
+  { src: asset("images/why-us-6.webp"), alt: "Кресты" },
+  { src: asset("images/clothing.webp"), alt: "Похоронная одежда" },
   {
-    src: "./images/plaques.webp",
+    src: asset("images/plaques.webp"),
     alt: "Таблички с фото, ФИО и даты жизни",
   },
 ] as const;

@@ -3,6 +3,7 @@ import { HiStar, LuMapPin, LuPhone } from "@/lib/icons";
 import { siteConfig, telHref } from "@/lib/site";
 import { SocialLinks } from "@/components/social-links";
 import { HeroVideo } from "./hero-video";
+import { asset } from "@/lib/utils";
 
 export function Hero() {
   return (
@@ -76,7 +77,7 @@ export function Hero() {
         </div>
         <div className="relative z-10 mx-auto max-w-4xl text-center hidden lg:block mt-auto">
           <Image
-            src="./images/bg-gvozdika.webp"
+            src={asset("images/bg-gvozdika.webp")}
             alt=""
             width={351}
             height={213}

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site";
+import { asset } from "@/lib/utils";
 
 export const dynamic = "force-static";
 
@@ -15,7 +16,7 @@ export default function manifest(): MetadataRoute.Manifest {
     lang: "ru",
     icons: [
       {
-        src: "./images/dove.svg",
+        src: asset("images/dove.svg"),
         sizes: "any",
         type: "image/svg+xml",
       },

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ownerValues } from "@/lib/data/owner";
 import { getOwnerIcon } from "@/lib/icon-maps";
 import { siteConfig } from "@/lib/site";
+import { asset } from "@/lib/utils";
 
 export function Owner() {
   return (
@@ -28,7 +29,7 @@ export function Owner() {
               <div className="relative mx-auto sm:min-w-[75%] md:min-w-[65%] min-w-full lg:hidden aspect-2/3">
                 <div className="relative h-full overflow-hidden rounded-lg border border-border bg-card/30">
                   <Image
-                    src={siteConfig.owner.image}
+                    src={asset(siteConfig.owner.image)}
                     alt={`${siteConfig.owner.name} — владелец агентства «Доверие»`}
                     fill
                     sizes="(min-width: 1024px) 22rem, 90vw"
@@ -67,7 +68,7 @@ export function Owner() {
           <div className="relative mx-auto max-lg:hidden min-w-[70%] lg:min-w-full aspect-2/3">
             <div className="relative h-full overflow-hidden rounded-lg border border-border bg-card/30">
               <Image
-                src={siteConfig.owner.image}
+                src={asset(siteConfig.owner.image)}
                 alt={`${siteConfig.owner.name} — владелец агентства «Доверие»`}
                 fill
                 sizes="(min-width: 1024px) 22rem, 90vw"

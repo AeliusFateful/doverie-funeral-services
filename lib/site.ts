@@ -28,7 +28,8 @@ export const siteConfig = {
   owner: {
     name: "Гусманов Сергей Равильевич",
     jobTitle: "Владелец агентства «Доверие»",
-    image: "./images/owner.webp",
+    // Raw public path; wrap with asset() in components, absUrl() in JSON-LD.
+    image: "images/owner.webp",
   },
   links: {
     gis2: "https://2gis.ru/kemerovo/firm/70000001091831399",

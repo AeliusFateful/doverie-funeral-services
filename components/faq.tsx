@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { LuPlus } from "@/lib/icons";
 import { faqs } from "@/lib/data/faq";
-import { cn } from "@/lib/utils";
+import { asset, cn } from "@/lib/utils";
 
 export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
@@ -15,7 +15,7 @@ export function Faq() {
     >
       <div className="max-w-4xl mx-auto">
         <img
-          src="./images/bg-white-lilies.webp"
+          src={asset("images/bg-white-lilies.webp")}
           alt=""
           className="pointer-events-none select-none absolute right-0 top-60 w-200 -z-1 opacity-10"
         />

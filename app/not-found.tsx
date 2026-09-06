@@ -4,6 +4,7 @@ import Link from "next/link";
 import { LuPhone } from "@/lib/icons";
 import { createPageMetadata } from "@/lib/seo";
 import { siteConfig, telHref } from "@/lib/site";
+import { asset } from "@/lib/utils";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Страница не найдена",
@@ -44,11 +45,11 @@ export default function NotFound() {
 
         <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-lg lg:max-w-lg">
           <Image
-            src="./images/angel404.webp"
+            src={asset("images/angel404.webp")}
             alt=""
             fill
             sizes="(min-width: 1024px) 32vw, 90vw"
-            loading="lazy"
+            loading="eager"
             className="object-cover"
           />
         </div>

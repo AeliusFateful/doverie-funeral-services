@@ -6,7 +6,7 @@ import Link from "next/link";
 import { LuMenu, LuPhone, LuX } from "@/lib/icons";
 import { navDesktop, navMobile } from "@/lib/nav";
 import { siteConfig, telHref } from "@/lib/site";
-import { cn } from "@/lib/utils";
+import { asset, cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -40,7 +40,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-1">
             <Image
               className="pointer-events-none select-none hidden min-[420px]:block"
-              src="./images/dove.svg"
+              src={asset("images/dove.svg")}
               alt=""
               width={23}
               height={23}
@@ -50,7 +50,7 @@ export function SiteHeader() {
             </span>
             <Image
               className="pointer-events-none select-none hidden min-[420px]:block transform-[scaleX(-1)]"
-              src="./images/dove.svg"
+              src={asset("images/dove.svg")}
               alt=""
               width={23}
               height={23}

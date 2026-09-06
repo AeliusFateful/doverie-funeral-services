@@ -1,13 +1,14 @@
 import { LuMapPin, LuPhone } from "@/lib/icons";
 import { SocialLinks } from "@/components/social-links";
 import { siteConfig, telHref } from "@/lib/site";
+import { asset } from "@/lib/utils";
 
 export function Contact() {
   return (
     <section id="contacts" className="section-surface relative overflow-hidden">
       <div className="relative z-1 section-py mx-auto max-w-site px-5 md:px-8">
         <img
-          src="./images/candle.webp"
+          src={asset("images/candle.webp")}
           alt=""
           className="pointer-events-none select-none absolute inset-0 object-cover opacity-8 w-full h-full -z-1"
         />

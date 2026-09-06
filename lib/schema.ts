@@ -8,8 +8,17 @@ const businessId = `${siteConfig.url}/#business`;
 const websiteId = `${siteConfig.url}/#website`;
 const personId = `${siteConfig.url}/#owner`;
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+// Canonical absolute URL for a public asset. Strips a leading "./", "/" or the
+// deploy basePath so JSON-LD always points at siteConfig.url regardless of how
+// the asset path was built (raw string or asset()).
 function absUrl(path: string) {
-  return `${siteConfig.url}/${path.replace(/^\.?\//, "")}`;
+  let clean = path.replace(/^\.?\//, "");
+  if (basePath && clean.startsWith(basePath.replace(/^\//, "") + "/")) {
+    clean = clean.slice(basePath.replace(/^\//, "").length + 1);
+  }
+  return `${siteConfig.url}/${clean}`;
 }
 
 function firstPrice(priceText: string) {
