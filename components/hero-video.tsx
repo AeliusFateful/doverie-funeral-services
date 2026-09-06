@@ -1,20 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { asset } from "@/lib/utils";
 
+// The hero video is desktop-only. Gate on a media query rather than a
+// resize listener so we only re-render when the breakpoint is crossed.
 export function HeroVideo() {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    const checkScreen = () => {
-      setIsDesktop(window.innerWidth >= 1024);
-    };
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const update = () => setIsDesktop(mq.matches);
 
-    checkScreen();
-    window.addEventListener("resize", checkScreen);
-
-    return () => window.removeEventListener("resize", checkScreen);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
   }, []);
 
   if (!isDesktop) return null;

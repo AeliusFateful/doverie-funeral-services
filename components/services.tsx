@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { SectionHeading } from "@/components/section-heading";
 import { services } from "@/lib/data/services";
-import { getServiceIcon } from "@/lib/icon-maps";
+import { icons } from "@/lib/icon-maps";
 import { asset } from "@/lib/utils";
 
 export function Services() {
@@ -12,19 +13,14 @@ export function Services() {
           alt=""
           className="pointer-events-none select-none absolute opacity-30 top-0 -left-52 w-150 -z-1"
         />
-        <div className="max-w-2xl">
-          <p className="section-label mb-5 flex items-center gap-3 text-accent">
-            <span className="h-px w-8 bg-accent/60" />
-            Что мы берём на себя
-          </p>
-          <h2 className="font-serif text-3xl font-light leading-tight tracking-tight text-balance text-foreground md:text-5xl">
-            Полный спектр ритуальных услуг
-          </h2>
-        </div>
+        <SectionHeading
+          label="Что мы берём на себя"
+          title="Полный спектр ритуальных услуг"
+        />
 
         <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => {
-            const Icon = getServiceIcon(service.icon);
+            const Icon = icons[service.icon];
             return (
               <div
                 key={service.title}

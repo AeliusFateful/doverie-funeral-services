@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import { SectionHeading } from "@/components/section-heading";
 import { products } from "@/lib/data/products";
 import { siteConfig, telHref } from "@/lib/site";
 
@@ -15,20 +16,11 @@ export function Products() {
   return (
     <section id="products" className="section-surface-alt">
       <div className="section-py mx-auto max-w-site px-5 md:px-8">
-        <div className="max-w-2xl">
-          <p className="section-label mb-5 flex items-center gap-3 text-accent">
-            <span className="h-px w-8 bg-accent/60" />
-            Ритуальные принадлежности
-          </p>
-          <h2 className="font-serif text-3xl font-light leading-tight tracking-tight text-balance text-foreground md:text-5xl">
-            Широкий ассортимент на любой бюджет
-          </h2>
-          <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
-            В нашем салоне представлены товары от бюджетных до премиальных.
-            Возможно изготовление изделий на заказ по вашим индивидуальным
-            пожеланиям.
-          </p>
-        </div>
+        <SectionHeading
+          label="Ритуальные принадлежности"
+          title="Широкий ассортимент на любой бюджет"
+          lead="В нашем салоне представлены товары от бюджетных до премиальных. Возможно изготовление изделий на заказ по вашим индивидуальным пожеланиям."
+        />
 
         <div className="relative mt-10 px-1 sm:px-2">
           <ProductsSlider products={products} />

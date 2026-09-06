@@ -1,5 +1,7 @@
+import type { IconName } from "@/lib/icon-maps";
+
 export type OwnerValue = {
-  icon: "handshake" | "map" | "award";
+  icon: IconName;
   title: string;
   text: string;
 };

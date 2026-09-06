@@ -1,14 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-// import dynamic from "next/dynamic";
 import { JsonLd } from "@/components/json-ld";
 import { rootMetadata } from "@/lib/seo";
 import { asset } from "@/lib/utils";
 import "./globals.css";
-
-// const CookieBanner = dynamic(() =>
-//   import("@/components/cookie-banner").then((m) => m.CookieBanner),
-// );
 
 const cormorant = localFont({
   src: "../public/fonts/Cormorant_Garamond/CormorantGaramond-VariableFont_wght.woff2",
@@ -69,7 +64,6 @@ export default function RootLayout({
       >
         <JsonLd />
         {children}
-        {/* <CookieBanner /> */}
       </body>
     </html>
   );

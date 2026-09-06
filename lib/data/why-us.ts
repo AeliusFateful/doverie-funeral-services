@@ -1,7 +1,8 @@
-import { siteConfig } from "../site";
+import type { IconName } from "@/lib/icon-maps";
+import { siteConfig } from "@/lib/site";
 
 export type WhyUsReason = {
-  icon: "clock" | "scale" | "shield" | "handshake" | "route";
+  icon: IconName;
   title: string;
   text: string;
 };
@@ -23,7 +24,7 @@ export const whyUsReasons: WhyUsReason[] = [
     text: "Работаем по договору с чеком и гарантией. Все документы оформляем сами, без очередей.",
   },
   {
-    icon: "handshake",
+    icon: "heartHandshake",
     title: "Бережное отношение",
     text: "Деликатное сопровождение без спешки и давления. Мы рядом на каждом шаге.",
   },

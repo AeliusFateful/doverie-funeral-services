@@ -15,7 +15,6 @@ export {
   LuRoute,
   LuScale,
   LuShieldCheck,
-  LuStar,
   LuTruck,
   LuX,
   LuChevronLeft,

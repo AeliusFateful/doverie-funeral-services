@@ -1,10 +1,11 @@
+import type { IconName } from "@/lib/icon-maps";
 import { asset } from "@/lib/utils";
 
 export type ProcessStep = {
   n: string;
   title: string;
   text: string;
-  icon: "phone" | "user" | "clipboard" | "handshake";
+  icon: IconName;
   image: string;
   featured: boolean;
 };
@@ -38,7 +39,7 @@ export const processSteps: ProcessStep[] = [
     n: "04",
     title: "Сопровождение",
     text: "Будем рядом в день прощания и останемся на связи, чтобы помочь и после.",
-    icon: "handshake",
+    icon: "heartHandshake",
     image: asset("images/process-dove-in-hands.webp"),
     featured: false,
   },

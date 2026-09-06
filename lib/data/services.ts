@@ -1,7 +1,8 @@
+import type { IconName } from "@/lib/icon-maps";
 import { asset } from "@/lib/utils";
 
 export type ServiceItem = {
-  icon: "flower" | "file" | "truck" | "flame" | "church" | "cross";
+  icon: IconName;
   title: string;
   text: string;
   image: string;

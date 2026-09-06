@@ -16,55 +16,29 @@ import {
   LuShieldCheck,
   LuTruck,
   LuUserRound,
-} from "../lib/icons";
-import type { OwnerValue } from "../lib/data/owner";
-import type { ProcessStep } from "../lib/data/process";
-import type { ServiceItem } from "../lib/data/services";
-import type { WhyUsReason } from "../lib/data/why-us";
+} from "@/lib/icons";
 import type { IconType } from "react-icons";
 
-const serviceIconMap: Record<ServiceItem["icon"], IconType> = {
+// One registry keyed by the string literals used across the data files.
+// Every `icon` field in lib/data/* must resolve to a key here.
+export const icons = {
   flower: LuFlower2,
   file: LuFileText,
   truck: LuTruck,
   flame: LuFlame,
   church: LuChurch,
   cross: LuCross,
-};
-
-const processIconMap: Record<ProcessStep["icon"], IconType> = {
   phone: LuPhone,
   user: LuUserRound,
   clipboard: LuClipboardList,
-  handshake: LuHeartHandshake,
-};
-
-const whyUsIconMap: Record<WhyUsReason["icon"], IconType> = {
   clock: LuClock,
   scale: LuScale,
   shield: LuShieldCheck,
-  handshake: LuHeartHandshake,
   route: LuRoute,
-};
-
-const ownerIconMap: Record<OwnerValue["icon"], IconType> = {
   handshake: LuHandshake,
+  heartHandshake: LuHeartHandshake,
   map: LuMapPinned,
   award: LuAward,
-};
+} satisfies Record<string, IconType>;
 
-export function getServiceIcon(icon: ServiceItem["icon"]) {
-  return serviceIconMap[icon];
-}
-
-export function getProcessIcon(icon: ProcessStep["icon"]) {
-  return processIconMap[icon];
-}
-
-export function getWhyUsIcon(icon: WhyUsReason["icon"]) {
-  return whyUsIconMap[icon];
-}
-
-export function getOwnerIcon(icon: OwnerValue["icon"]) {
-  return ownerIconMap[icon];
-}
+export type IconName = keyof typeof icons;

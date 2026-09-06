@@ -1,5 +1,6 @@
-import { LuMapPin, LuPhone } from "@/lib/icons";
+import { SectionHeading } from "@/components/section-heading";
 import { SocialLinks } from "@/components/social-links";
+import { LuMapPin, LuPhone } from "@/lib/icons";
 import { siteConfig, telHref } from "@/lib/site";
 import { asset } from "@/lib/utils";
 
@@ -13,19 +14,12 @@ export function Contact() {
           className="pointer-events-none select-none absolute inset-0 object-cover opacity-8 w-full h-full -z-1"
         />
         <div className="mx-auto max-w-2xl text-center">
-          <div>
-            <p className="section-label mb-5 flex items-center justify-center gap-3 text-accent">
-              <span className="h-px w-8 bg-accent/60 max-sm:hidden" />
-              Мы рядом в&nbsp;трудную&nbsp;минуту
-            </p>
-            <h2 className="font-serif text-3xl font-light leading-tight tracking-tight text-balance text-foreground md:text-5xl">
-              Позвоните нам в любое время
-            </h2>
-            <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">
-              Дежурный агент ответит немедленно и подскажет, что делать дальше.
-              Звонок бесплатный и ни к чему не обязывает.
-            </p>
-          </div>
+          <SectionHeading
+            align="center"
+            label="Мы рядом в трудную минуту"
+            title="Позвоните нам в любое время"
+            lead="Дежурный агент ответит немедленно и подскажет, что делать дальше. Звонок бесплатный и ни к чему не обязывает."
+          />
 
           <div>
             <a

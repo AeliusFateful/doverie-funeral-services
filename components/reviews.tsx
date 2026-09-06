@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/section-heading";
 import { HiStar, LuQuote } from "@/lib/icons";
 import { reviewPlatforms, reviews } from "@/lib/data/reviews";
 import { asset } from "@/lib/utils";
@@ -8,16 +9,13 @@ export function Reviews() {
       <div className="section-py mx-auto max-w-site px-5 md:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
           <div className="relative z-1">
-            <p className="section-label mb-5 flex items-center gap-3 text-accent">
-              <span className="h-px w-8 bg-accent/60" />
-              Отзывы
-            </p>
-            <h2 className="font-serif text-3xl font-light leading-tight tracking-tight text-balance text-foreground md:text-4xl">
-              Нам доверяют семьи по всему городу
-            </h2>
-            <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
-              Оценки и отзывы на 2ГИС и Яндекс Картах.
-            </p>
+            <SectionHeading
+              label="Отзывы"
+              title="Нам доверяют семьи по всему городу"
+              size="md"
+              lead="Оценки и отзывы на 2ГИС и Яндекс Картах."
+              className="max-w-none"
+            />
 
             <div className="mt-8 flex flex-col gap-3">
               {reviewPlatforms.map((platform) => (

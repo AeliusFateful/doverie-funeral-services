@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { LuPhone } from "@/lib/icons";
+import { SectionHeading } from "@/components/section-heading";
 import { processSteps } from "@/lib/data/process";
-import { getProcessIcon } from "@/lib/icon-maps";
+import { icons } from "@/lib/icon-maps";
 import { siteConfig, telHref } from "@/lib/site";
 
 function StepCard({
@@ -11,7 +12,7 @@ function StepCard({
   step: (typeof processSteps)[number];
   variant: "featured" | "compact" | "mobile";
 }) {
-  const Icon = getProcessIcon(step.icon);
+  const Icon = icons[step.icon];
   const isFeatured = variant === "featured";
 
   return (
@@ -87,19 +88,15 @@ export function Process() {
   return (
     <section id="process" className="section-surface-alt">
       <div className="section-py mx-auto max-w-site px-5 md:px-8">
-        <div className="max-w-2xl">
-          <p className="section-label mb-5 flex items-center gap-3 text-accent">
-            <span className="h-px w-8 bg-accent/60" />
-            Как мы работаем
-          </p>
-          <h2 className="font-serif text-3xl font-light leading-tight tracking-tight text-balance text-foreground md:text-5xl">
-            Один звонок — и вы больше не одни
-          </h2>
-          <p className="mt-5 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-base font-medium text-accent">
+        <SectionHeading
+          label="Как мы работаем"
+          title="Один звонок — и вы больше не одни"
+        >
+          <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-base font-medium text-accent">
             <LuPhone className="h-4 w-4 shrink-0" aria-hidden="true" />
             Агент приедет за {siteConfig.agentArrivalMinutes} минут после звонка
-          </p>
-        </div>
+          </span>
+        </SectionHeading>
 
         <div className="relative mt-14 hidden lg:block">
           <div

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { SectionHeading } from "@/components/section-heading";
 import { LuPlus } from "@/lib/icons";
 import { faqs } from "@/lib/data/faq";
 import { asset, cn } from "@/lib/utils";
@@ -19,15 +20,11 @@ export function Faq() {
           alt=""
           className="pointer-events-none select-none absolute right-0 top-60 w-200 -z-1 opacity-10"
         />
-        <div className="text-center">
-          <p className="section-label mb-5 flex items-center justify-center gap-3 text-accent">
-            <span className="h-px w-8 bg-accent/60" />
-            Частые вопросы
-          </p>
-          <h2 className="font-serif text-3xl font-light leading-tight tracking-tight text-balance text-foreground md:text-5xl">
-            Отвечаем на важные вопросы
-          </h2>
-        </div>
+        <SectionHeading
+          align="center"
+          label="Частые вопросы"
+          title="Отвечаем на важные вопросы"
+        />
 
         <div className="mt-14 divide-y divide-border border-y border-border">
           {faqs.map((item, i) => {

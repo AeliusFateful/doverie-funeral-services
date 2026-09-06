@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { SectionHeading } from "@/components/section-heading";
 import { ownerValues } from "@/lib/data/owner";
-import { getOwnerIcon } from "@/lib/icon-maps";
+import { icons } from "@/lib/icon-maps";
 import { siteConfig } from "@/lib/site";
 import { asset } from "@/lib/utils";
 
@@ -11,21 +12,13 @@ export function Owner() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <div className="flex flex-col gap-10">
-              <div>
-                <p className="section-label mb-5 flex items-center gap-3 text-accent">
-                  <span className="h-px w-8 bg-accent/60" />
-                  Владелец «Доверие»
-                </p>
-                <h2 className="font-serif text-3xl font-light leading-tight tracking-tight text-balance text-foreground md:text-4xl">
-                  {siteConfig.owner.name}
-                </h2>
-                <p className="mt-6 max-w-4xl lg:max-w-xl text-lg leading-relaxed text-muted-foreground">
-                  Много лет я лично руковожу агентством «Доверие» и сопровождаю
-                  семьи в самый трудный момент. Для меня ритуальные услуги — не
-                  просто работа: я бережно беру на себя организацию, оставляя
-                  вам главное — время побыть с близкими и достойно попрощаться.
-                </p>
-              </div>
+              <SectionHeading
+                label="Владелец «Доверие»"
+                title={siteConfig.owner.name}
+                size="md"
+                className="max-w-none lg:max-w-xl"
+                lead="Много лет я лично руковожу агентством «Доверие» и сопровождаю семьи в самый трудный момент. Для меня ритуальные услуги — не просто работа: я бережно беру на себя организацию, оставляя вам главное — время побыть с близкими и достойно попрощаться."
+              />
               <div className="relative mx-auto sm:min-w-[75%] md:min-w-[65%] min-w-full lg:hidden aspect-2/3">
                 <div className="relative h-full overflow-hidden rounded-lg border border-border bg-card/30">
                   <Image
@@ -42,7 +35,7 @@ export function Owner() {
 
             <div className="mt-10 flex flex-col divide-y divide-border border-y border-border">
               {ownerValues.map((value) => {
-                const Icon = getOwnerIcon(value.icon);
+                const Icon = icons[value.icon];
                 return (
                   <div
                     key={value.title}
