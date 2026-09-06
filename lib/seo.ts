@@ -1,60 +1,26 @@
 import type { Metadata } from "next";
-import { siteConfig } from "../lib/site";
+import { siteConfig } from "@/lib/site";
 
 const city = siteConfig.address.city;
 
 export const seoKeywords = [
   `ритуальные услуги ${city}`,
+  `ритуальные услуги ${city} круглосуточно`,
+  `ритуальные принадлежности ${city}`,
   `организация похорон ${city}`,
+  `заказать похороны ${city}`,
   `вызов ритуального агента ${city}`,
   `похоронное бюро ${city}`,
-  `похоронное агентство ${city}`,
-  `похоронное агентство премиум`,
-  `ритуальное агентство ${city}`,
-  `ритуальное агентство премиум`,
+  `похороны под ключ ${city}`,
   `ритуальная служба ${city}`,
-  `похороны ${city}`,
-  `похоронные услуги`,
-  `похоронные услуги премиум`,
-  `похороные услуги ${city}`,
-  `ритуальные услуги в ${city}`,
-  `организация похорон в ${city}`,
-  `организация похорон премиум`,
-  `ритуальный агент ${city}`,
-  `кремация ${city}`,
-  `ритуальные товары ${city}`,
-  `памятники ${city}`,
-  `памятники на могилу`,
-  `надгробия на могилу`,
   `гробы ${city}`,
   `венки ${city}`,
-  `кресты ${city}`,
+  `кремация ${city}`,
+  `памятники ${city}`,
   `катафалк ${city}`,
-  `оформление документов похорон ${city}`,
+  `оформление документов на похороны ${city}`,
   `круглосуточные ритуальные услуги ${city}`,
-  `${siteConfig.name} ритуальные услуги`,
-  `ритуальные услуги ${siteConfig.name}`,
-  "ритуальные услуги",
-  "организация похорон",
-  "вызов ритуального агента",
-  "ритуальный агент цена",
-  "организация похорон цена",
-  "похоронное бюро недорого",
-  "ритуальная служба недорого",
-  "ритуальная служба премиум",
-  "похороны заказать",
-  "ритуальная служба заказать",
-  `бюро ритуальных услуг ${city}`,
-  `бюро похорон ${city}`,
-  `бюро похорон`,
-  `бюро похорон премиум`,
-  `бюро похорон заказать`,
-  `Ритуальные услуги ${city} недорого`,
-  `Ритуальные услуги ${city} заказать`,
-  `бюро похорон лучшие`,
-  `ритуальный агент лучшие`,
-  `ритуальный агент премиум`,
-  `онлайн ритуальная служба`,
+  `${siteConfig.name} ${city}`,
 ] as const;
 
 const geoMeta = {
@@ -65,37 +31,36 @@ const geoMeta = {
 } as const;
 
 const ogImage = {
-  // Resolved against metadataBase (siteConfig.url) → always an absolute URL on
-  // the canonical domain, which is what OG/Twitter crawlers need.
   url: "/images/og-image.jpg",
-  width: 512,
-  height: 512,
-  alt: `${siteConfig.name} — ритуальные услуги в ${city}`,
+  width: 1200,
+  height: 1200,
+  type: "image/jpeg",
+  alt: `${siteConfig.legalName} — ритуальные услуги в ${city}`,
 } as const;
 
 export const rootMetadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.name,
   title: {
     default: siteConfig.title,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: [...seoKeywords],
-  authors: [{ name: siteConfig.legalName }],
+  authors: [{ name: siteConfig.legalName, url: siteConfig.url }],
   creator: siteConfig.legalName,
   publisher: siteConfig.legalName,
   category: "business",
+  formatDetection: { telephone: false, address: false, email: false },
   alternates: {
     canonical: siteConfig.url,
-    languages: {
-      "ru-RU": siteConfig.url,
-    },
+    languages: { "ru-RU": siteConfig.url, "x-default": siteConfig.url },
   },
   openGraph: {
     type: "website",
     locale: "ru_RU",
     url: siteConfig.url,
-    siteName: siteConfig.name,
+    siteName: siteConfig.legalName,
     title: siteConfig.title,
     description: siteConfig.description,
     images: [ogImage],
@@ -113,6 +78,7 @@ export const rootMetadata: Metadata = {
       index: true,
       follow: true,
       "max-image-preview": "large",
+      "max-video-preview": -1,
       "max-snippet": -1,
     },
   },
@@ -137,18 +103,22 @@ export function createPageMetadata({
     description,
     alternates: { canonical: url },
     openGraph: {
+      type: "website",
+      locale: "ru_RU",
+      siteName: siteConfig.legalName,
       title,
       description,
       url,
       images: [ogImage],
     },
     twitter: {
+      card: "summary_large_image",
       title,
       description,
       images: [ogImage.url],
     },
     ...(noIndex && {
-      robots: { index: false, follow: false },
+      robots: { index: false, follow: false, nocache: true },
     }),
   };
 }

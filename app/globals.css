@@ -63,8 +63,6 @@
 }
 
 @layer utilities {
-  /* Alternating section backgrounds. --section-alt-bg is read by the
-     why-us fade overlay, so it must be set even on the plain surface. */
   .section-surface {
     @apply bg-background;
     --section-alt-bg: var(--background);

@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react";
 import { asset } from "@/lib/utils";
 
-// The hero video is desktop-only. Gate on a media query rather than a
-// resize listener so we only re-render when the breakpoint is crossed.
 export function HeroVideo() {
   const [isDesktop, setIsDesktop] = useState(false);
 

@@ -17,23 +17,19 @@ export function SiteFooter() {
             </span>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
               Ритуальная служба полного цикла в Кемерово. Круглосуточная помощь
-              семьям в&nbsp;организации достойного прощания.
+              семьям в&nbsp;организации достойного прощания. Работаем
+              с&nbsp;{siteConfig.foundedYear}&nbsp;года.
             </p>
-            <p className="mt-4 lg:mt-6 text-sm text-muted-foreground">
-              {siteConfig.ip}
-            </p>
-            <p className="mt-2 text-sm text-muted-foreground">
-              ОГРНИП - {siteConfig.ogrnip}
-            </p>
-            <p className="mt-2 text-sm text-muted-foreground">
-              ИНН - {siteConfig.inn}
-            </p>
-            <p className="mt-2 text-sm text-muted-foreground">
-              «{siteConfig.brand}» — коммерческое обозначение.
-            </p>
+            <address className="mt-4 lg:mt-6 space-y-2 text-sm not-italic text-muted-foreground">
+              <p>{siteConfig.ip}</p>
+              <p>ОГРНИП&nbsp;— {siteConfig.ogrnip}</p>
+              <p>ИНН&nbsp;— {siteConfig.inn}</p>
+              <p>Адрес: {siteConfig.address.full}</p>
+              <p>«{siteConfig.brand}» — коммерческое обозначение.</p>
+            </address>
             <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
               Цены указаны как ориентировочные, не являются публичной офертой.
-              Точная стоимость - по договору.
+              Точная стоимость&nbsp;— по договору.
             </p>
           </div>
 

@@ -19,8 +19,6 @@ import {
 } from "@/lib/icons";
 import type { IconType } from "react-icons";
 
-// One registry keyed by the string literals used across the data files.
-// Every `icon` field in lib/data/* must resolve to a key here.
 export const icons = {
   flower: LuFlower2,
   file: LuFileText,

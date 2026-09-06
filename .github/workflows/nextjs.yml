@@ -76,7 +76,7 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: /doverie-funeral-services
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./out
 

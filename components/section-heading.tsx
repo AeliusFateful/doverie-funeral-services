@@ -2,16 +2,11 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 type SectionHeadingProps = {
-  /** Small eyebrow label above the title. */
   label: string;
-  /** The <h2> text. */
   title: ReactNode;
-  /** Optional lead paragraph under the title. */
   lead?: ReactNode;
-  /** Arbitrary extra content under the title (e.g. a badge). Rendered raw. */
   children?: ReactNode;
   align?: "left" | "center";
-  /** lg → md:text-5xl for standalone sections, md → md:text-4xl for split layouts. */
   size?: "lg" | "md";
   className?: string;
 };
