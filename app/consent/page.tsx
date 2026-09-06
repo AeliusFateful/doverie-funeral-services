@@ -37,8 +37,9 @@ export default function ConsentPage() {
               Настоящее Согласие на обработку персональных данных (далее —
               Согласие) регулирует условия обработки данных пользователей сайта{" "}
               {siteConfig.url} (далее — Сайт), принадлежащего{" "}
-              {siteConfig.legalName} (далее — Оператор), при использовании
-              Сайта, включая данные, собираемые системами веб-аналитики.
+              {siteConfig.ip} (коммерческое обозначение «{siteConfig.brand}»,
+              далее — Оператор), при использовании Сайта, включая данные,
+              собираемые системами веб-аналитики.
             </p>
             <p className="mt-3">
               Согласие является дополнением к{" "}
@@ -171,11 +172,13 @@ export default function ConsentPage() {
               .
             </p>
             <p className="mt-3">
-              {siteConfig.legalName}
+              {siteConfig.ip}
               <br />
               ОГРНИП: {siteConfig.ogrnip}
               <br />
               ИНН: {siteConfig.inn}
+              <br />
+              «{siteConfig.brand}» — коммерческое обозначение.
               <br />
               Адрес: {siteConfig.address.full}
               <br />

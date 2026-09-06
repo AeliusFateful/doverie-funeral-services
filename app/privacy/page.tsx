@@ -37,7 +37,8 @@ export default function PrivacyPage() {
               Настоящая Политика конфиденциальности (далее — Политика)
               определяет порядок обработки и защиты персональных данных
               пользователей сайта {siteConfig.url} (далее — Сайт),
-              принадлежащего {siteConfig.legalName} (далее — Оператор).
+              принадлежащего {siteConfig.ip} (коммерческое обозначение «
+              {siteConfig.brand}», далее — Оператор).
             </p>
             <p className="mt-3">
               Оператор обеспечивает защиту персональных данных в соответствии с
@@ -193,11 +194,13 @@ export default function PrivacyPage() {
               9. Контактная информация
             </h2>
             <p className="mt-3">
-              {siteConfig.legalName}
+              {siteConfig.ip}
               <br />
               ОГРНИП: {siteConfig.ogrnip}
               <br />
               ИНН: {siteConfig.inn}
+              <br />
+              «{siteConfig.brand}» — коммерческое обозначение.
               <br />
               Адрес: {siteConfig.address.full}
               <br />

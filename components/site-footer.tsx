@@ -20,10 +20,20 @@ export function SiteFooter() {
               семьям в&nbsp;организации достойного прощания.
             </p>
             <p className="mt-4 lg:mt-6 text-sm text-muted-foreground">
+              {siteConfig.ip}
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground">
               ОГРНИП - {siteConfig.ogrnip}
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
               ИНН - {siteConfig.inn}
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              «{siteConfig.brand}» — коммерческое обозначение.
+            </p>
+            <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
+              Цены указаны как ориентировочные, не являются публичной офертой.
+              Точная стоимость - по договору.
             </p>
           </div>
 
@@ -98,10 +108,11 @@ export function SiteFooter() {
         <div className="mt-6 flex flex-col gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <div className="flex max-md:flex-col gap-1 sm:text-left max-sm:text-center">
             <p>© 2026 {siteConfig.legalName}.</p>
-            <p>Все права защищены.</p>
           </div>
           <div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-4 max-sm:text-center text-right">
-            <Link
+            <p>Все права защищены.</p>
+
+            {/* <Link
               href="/privacy"
               className="underline underline-offset-4 transition-colors hover:text-foreground"
             >
@@ -112,7 +123,7 @@ export function SiteFooter() {
               className="underline underline-offset-4 transition-colors hover:text-foreground"
             >
               Согласие на обработку персональных данных
-            </Link>
+            </Link> */}
           </div>
         </div>
 
