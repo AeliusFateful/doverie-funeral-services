@@ -65,7 +65,7 @@ const geoMeta = {
 } as const;
 
 const ogImage = {
-  url: "./images/dove.svg",
+  url: "./images/og-image.jpg",
   width: 512,
   height: 512,
   alt: `${siteConfig.name} — ритуальные услуги в ${city}`,

@@ -1,13 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import { JsonLd } from "@/components/json-ld";
 import { rootMetadata } from "@/lib/seo";
 import "./globals.css";
 
-const CookieBanner = dynamic(() =>
-  import("@/components/cookie-banner").then((m) => m.CookieBanner),
-);
+// const CookieBanner = dynamic(() =>
+//   import("@/components/cookie-banner").then((m) => m.CookieBanner),
+// );
 
 const cormorant = localFont({
   src: "../public/fonts/Cormorant_Garamond/CormorantGaramond-VariableFont_wght.woff2",
@@ -57,7 +57,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="./images/hero/Hero-Angel.webp"
+          href="./images/hero-angel.webp"
           fetchPriority="high"
           media="(min-width: 1024px)"
         />
@@ -68,7 +68,7 @@ export default function RootLayout({
       >
         <JsonLd />
         {children}
-        <CookieBanner />
+        {/* <CookieBanner /> */}
       </body>
     </html>
   );

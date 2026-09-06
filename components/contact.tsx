@@ -7,7 +7,7 @@ export function Contact() {
     <section id="contacts" className="section-surface relative overflow-hidden">
       <div className="relative z-1 section-py mx-auto max-w-site px-5 md:px-8">
         <img
-          src="./images/candle.jpg"
+          src="./images/candle.webp"
           alt=""
           className="pointer-events-none select-none absolute inset-0 object-cover opacity-8 w-full h-full -z-1"
         />
