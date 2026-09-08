@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { LuChevronLeft, LuChevronRight } from "@/lib/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards, Keyboard, Navigation } from "swiper/modules";
+import { EffectCards, Keyboard, Mousewheel, Navigation } from "swiper/modules";
 import { asset } from "@/lib/utils";
 
 import "swiper/css";
@@ -11,7 +11,10 @@ import "swiper/css/effect-cards";
 import "swiper/css/navigation";
 
 const slides = [
-  { src: asset("images/why-us-1.webp"), alt: "Вход в похоронную службу «Доверие»" },
+  {
+    src: asset("images/why-us-1.webp"),
+    alt: "Вход в похоронную службу «Доверие»",
+  },
   { src: asset("images/why-us-2.webp"), alt: "Венки" },
   { src: asset("images/why-us-3.webp"), alt: "Корзинка цветов" },
   { src: asset("images/product-coffin.webp"), alt: "Гробы" },
@@ -28,11 +31,12 @@ export function WhyUsSlider() {
   return (
     <div className="why-us-slider relative h-full min-h-80 w-full lg:min-h-0">
       <Swiper
-        modules={[EffectCards, Navigation, Keyboard]}
+        modules={[EffectCards, Navigation, Keyboard, Mousewheel]}
         effect="cards"
         grabCursor
         cardsEffect={{ perSlideRotate: 4, slideShadows: false }}
         keyboard={{ enabled: true }}
+        mousewheel={{ forceToAxis: true }}
         navigation={{
           prevEl: ".why-us-slider-prev",
           nextEl: ".why-us-slider-next",
@@ -45,9 +49,7 @@ export function WhyUsSlider() {
         className="h-full w-full overflow-hidden rounded-2xl"
       >
         {slides.map((slide) => (
-          <SwiperSlide
-            key={slide.src}
-          >
+          <SwiperSlide key={slide.src}>
             <Image
               src={slide.src}
               alt={slide.alt}

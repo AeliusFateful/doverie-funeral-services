@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import { LuChevronLeft, LuChevronRight } from "@/lib/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Keyboard, Navigation } from "swiper/modules";
+import { Autoplay, Keyboard, Mousewheel, Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 
 import type { ProductItem } from "@/lib/data/products";
@@ -29,7 +29,7 @@ export function ProductsSlider({ products }: ProductsSliderProps) {
       onMouseLeave={resumeAutoplay}
     >
       <Swiper
-        modules={[Navigation, Autoplay, Keyboard]}
+        modules={[Navigation, Autoplay, Keyboard, Mousewheel]}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -54,6 +54,7 @@ export function ProductsSlider({ products }: ProductsSliderProps) {
           1024: { slidesPerView: 4, slidesPerGroup: 1 },
         }}
         keyboard={{ enabled: true }}
+        mousewheel={{ forceToAxis: true }}
         navigation={{
           prevEl: ".products-slider-prev",
           nextEl: ".products-slider-next",
